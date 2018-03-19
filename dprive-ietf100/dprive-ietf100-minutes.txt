@@ -1,0 +1,83 @@
+
+Mini Agenda:
+  - Erik/Ben talk TLS-Android
+  - Sara talks Stubby
+  - Alex talks padding policy
+  - Other Business
+
+### Chairs
+
+drpive probably meet in London
+       should be a rechartering
+
+res-auth stuff will ultimately hit ICANN and then fail
+         how would TLS be done at the root?
+         usual ICANN policy quagmire
+Tim said 8.8.8.8 has some interest in TLS for DNS
+anycast service from PCH for TLS/DNS - real soon now
+
+### DTLS on Android
+
+Ben Schwartz & Erik Kline showed demo of DTLS on Android
+
+phone has no custom code - standard build since last week
+          maybe later over quic
+          settings offer opportunistic mode/off select provider
+          captive portal checks
+showed traffic to port 853
+every recursive with this android build will query 853 by default
+            prove there's no enormous latency
+            no pipelining yet - but it may be needed
+            some kernel hacks - TLS false start(?)
+more implementation guidance would help
+will fallback to port 53 if port 853 gets blocked or dropped
+probably ~1 year away from general release - depends on QA and so on
+no support for padding
+when latency issue cropped up, why not use dnscrypt or dnscurve?
+     no I-D so google developers rejected the question
+
+operation and discovery ideas
+
+Tom Pusteri has an iOS client - blocked by an apple bug
+    apple guy offers to expedite the bug report (Chris Wood?)
+
+Warren has TLSA records provisioned for DNS/TLS on his server
+
+### Stubby
+
+Sara
+        Working with Packet Clearinghouse on resolvers
+        windows installer released for stubby - Willem Toorop did it
+        generated lots of interest, feedback and bug reports
+        Sara working on a lightweight client GUI for mac - next week?
+             windows version later
+
+DNS privacy workshop in San Diego in Q1 2017
+    joint session with security usability workshop maybe
+    CFP is on the NDSS web site
+
+### Padding Policy
+
+padding: 128 bytes on client, 426 on server according to dkg's recommendation
+         90% of query/response pairs fit that profile
+        Alex: draft is still experimental
+              roll another rev and go to WGLC in December
+        no empirical data yet on padding sizes
+           need more academic work
+           padding policy size might identify too much about the client
+        wg doesn't have enough info on dkg's threat model yet
+        #padding bits/query could leak too much info for zillions of lookup for say cnn.com
+        trade-offs between packet size v battery length
+
+large-scale deployment in ~1 year - PCH servers and Android clients
+
+questions about long-lived TCP connection
+          Alison mentioned Wes & John Heideman's paper on trade offs
+          Sara said stubby's 10-second idle timeout annoys users
+
+### Chairs Actions:
+
+  - Brian will run WGLC on padding policy
+  - Tim and Brian will work on charter text
+    - Terry says sooner rather than later.
+  Look for common set of metrics to collect.

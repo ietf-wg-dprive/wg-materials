@@ -1,0 +1,43 @@
+# DNS Privacy Exchange (DPRIVE) WG
+## IETF 99, Prague
+
+* Date: Tuesday, 18 July 2017
+* Time: 09:30-12:00 CEST
+* Room: Congress Hall III
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+
+* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+
+---
+## Agenda
+
+### Administrivia
+
+* Agenda Bashing, Blue Sheets, etc,  10 min
+
+### Current Working Group Business
+
+* [draft-ietf-dprive-dtls-and-tls-profiles](https://tools.ietf.org/html/draft-ietf-dprive-dtls-and-tls-profiles/), Chairs
+
+    Give it a Review!
+    People need to review and comment
+
+* [draft-ietf-dprive-padding-policy](https://tools.ietf.org/html/ietf-dprive-padding-policy/), Mayerhoff
+
+### New Working Group Business
+
+* [draft-huitema-quic-dnsoquic](https://tools.ietf.org/html/huitema-quic-dnsoquic/), Huitema, 15min
+    action:  Useful document? Can we adopt?
+
+* [draft-dkg-dprive-demux-dns-http](https://tools.ietf.org/html/dkg-dprive-demux-dns-http/), Gilmor, 5 min
+    action: why again?
+
+### Step 2
+
+* question: Is anyone measuring uptake/usage of tls-over-dns? 
+
+### Where do we go from here?
