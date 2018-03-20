@@ -1,0 +1,50 @@
+DPRIVE Charter 2.0
+
+The DNS PRIVate Exchange (DPRIVE) Working Group develops mechanisms
+to provide confidentiality to DNS transactions in order to address
+concerns surrounding pervasive monitoring (RFC 7258).
+
+The set of DNS requests that an individual makes can provide an
+attacker with a large amount of information about that individual.
+DPRIVE aims to deprive the attacker of this information (The IETF
+defines pervasive monitoring as an attack [RFC7258]).
+
+The initial focus of this Working Group was the development of
+mechanisms that provide confidentiality and authentication between
+DNS Clients and Iterative Resolvers (published as RFCs 7858 and
+8094). With proposed standard solutions for the client-to-iterative
+resolvers published, the working group turns its attention to the
+development of documents focused on: 1) providing confidentiality
+to DNS transactions between Iterative Resolvers and Authoritative
+Servers, 2) measuring the performance of the proposed solutions
+against pervasive monitoring, and 3) developing recommendations for
+DNS privacy operational practices.  Some of the results of this working
+group may be experimental. There are numerous aspects that differ
+between DNS exchanges with an iterative resolver and exchanges
+involving DNS root/authoritative servers. The working group will
+work with DNS operators and developers (via the DNSOP WG) to ensure
+that proposed solutions address key requirements.
+
+DPRIVE is chartered to work on mechanisms that add confidentiality
+to the DNS. While it may be tempting to solve other DNS issues while
+adding confidentiality, DPRIVE is not the working group to do this.
+DPRIVE will not work on any integrity-only mechanisms.  Examples
+of the sorts of risks that DPRIVE will address can be found in [RFC
+7626], and include both passive wiretapping and more active attacks,
+such as MITM attacks. DPRIVE will address risks to end-users' privacy
+(for example, which websites an end user is accessing).
+
+DPRIVE Work Items:
+
+- Develop requirements for adding confidentiality to DNS exchanges
+between recursive resolvers and authoritative servers (unpublished
+document).
+
+- Investigate potential solutions for adding confidentiality to DNS
+exchanges involving authoritative servers (Experimental).
+
+- Define, collect and publish performance data measuring effectiveness
+of DPRIVE-published technologies against pervasive monitoring
+attacks.
+
+- Document Best Current Practices for operating DNS Privacy services.

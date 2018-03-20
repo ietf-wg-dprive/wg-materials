@@ -1,0 +1,28 @@
+0. Minute taker & Jabber scribe(s)?
+
+1. Agenda Bashing
+	- Chairs
+	- 5 minutes
+
+2. Document Status
+	- Chairs
+	- 5 minutes
+
+3. DNS Privacy BCP
+	- Sara Dickinson
+	- 20 minutes
+	- https://datatracker.ietf.org/doc/draft-dickinson-bcp-op/
+
+4. Using Bloom Filters to Collect DNS Queries
+	- Roland van Rijswijk-Deij
+	- 10 minutes
+
+4. DNS Resolver to Authoratative
+	- Stephane Bortzmeyer
+	- 20 minutes
+	- https://datatracker.ietf.org/doc/draft-bortzmeyer-dprive-resolver-to-auth/
+
+5. WG Re-charter?
+	- Chairs
+	- 20 minutes
+	- TBD
