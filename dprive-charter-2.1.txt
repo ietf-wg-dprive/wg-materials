@@ -17,13 +17,14 @@ resolvers published, the working group turns its attention to the
 development of documents focused on: 1) providing confidentiality
 to DNS transactions between Iterative Resolvers and Authoritative
 Servers, 2) measuring the performance of the proposed solutions
-against pervasive monitoring, and 3) developing recommendations for
-DNS privacy operational practices.  Some of the results of this working
-group may be experimental. There are numerous aspects that differ
-between DNS exchanges with an iterative resolver and exchanges
-involving DNS root/authoritative servers. The working group will
-work with DNS operators and developers (via the DNSOP WG) to ensure
-that proposed solutions address key requirements.
+against pervasive monitoring, and 3) define operational, policy, and
+security considerations for DNS operators offering DNS privacy
+services.  Some of the results of this working group may be experimental.
+There are numerous aspects that differ between DNS exchanges with an
+iterative resolver and exchanges involving DNS root/authoritative
+servers. The working group will work with DNS operators and developers
+(via the DNSOP WG) to ensure that proposed solutions address key
+requirements.
 
 DPRIVE is chartered to work on mechanisms that add confidentiality
 to the DNS. While it may be tempting to solve other DNS issues while
