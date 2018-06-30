@@ -1,0 +1,30 @@
+# DNS Privacy Exchange (DPRIVE) WG
+## IETF 102, Montreal
+
+* Date: Wednesday, 18 July 2017
+* Time: 13:30-15:00 CEST
+* Room: Place du Canada
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+
+* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+
+---
+## Agenda
+
+### Administrivia
+
+* Agenda Bashing, Blue Sheets, etc,  10 min
+
+### Current Working Group Business
+
+draft-dickinson-bcp-op
+https://datatracker.ietf.org/doc/draft-dickinson-bcp-op/
+
+### New Working Group Business
+
+* Recursive to Authorative discussion,  Chairs 
+
