@@ -21,10 +21,12 @@
 
 ### Current Working Group Business
 
-draft-dickinson-bcp-op
-https://datatracker.ietf.org/doc/draft-dickinson-bcp-op/
+* [draft-dickinson-dprive-bcp-op](https://datatracker.ietf.org/doc/draft-dickinson-dprive-bcp-op/)
 
 ### New Working Group Business
 
-* Recursive to Authorative discussion,  Chairs 
+* [draft-annee-dprive-oblivious-dns](https://datatracker.ietf.org/doc/draft-annee-dprive-oblivious-dns/)
 
+## Stage 2
+
+* Recursive to Authorative discussion,  Chairs 
