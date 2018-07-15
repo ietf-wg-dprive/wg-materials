@@ -21,9 +21,11 @@
 
 ### Current Working Group Business
 
-* Some analysis of the RIPE Atlas probe data on DNS-Privacy, Brian Haberman 
+* Some analysis of the RIPE Atlas probe data on DNS-Privacy, Brian Haberman
 
 * [draft-dickinson-dprive-bcp-op](https://datatracker.ietf.org/doc/draft-dickinson-dprive-bcp-op/)
+
+* [draft-bortzmeyer-dprive-rfc7626](https://datatracker.ietf.org/doc/draft-bortzmeyer-dprive-rfc7626-bis/)
 
 ### New Working Group Business
 
