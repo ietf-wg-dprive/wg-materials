@@ -21,16 +21,16 @@
 
 ### Current Working Group Business
 
-* Some analysis of the RIPE Atlas probe data on DNS-Privacy, Brian Haberman
+* Some analysis of the RIPE Atlas probe data on DNS-Privacy, Brian Haberman, 10 min
 
 * [draft-dickinson-dprive-bcp-op](https://datatracker.ietf.org/doc/draft-dickinson-dprive-bcp-op/)
 
-* [draft-bortzmeyer-dprive-rfc7626](https://datatracker.ietf.org/doc/draft-bortzmeyer-dprive-rfc7626-bis/)
+* [draft-bortzmeyer-dprive-rfc7626](https://datatracker.ietf.org/doc/draft-bortzmeyer-dprive-rfc7626-bis/), Sara Dickinson, 25 min
 
 ### New Working Group Business
 
-* [draft-annee-dprive-oblivious-dns](https://datatracker.ietf.org/doc/draft-annee-dprive-oblivious-dns/)
+* [draft-annee-dprive-oblivious-dns](https://datatracker.ietf.org/doc/draft-annee-dprive-oblivious-dns/), Nick Feamster, 15 min
 
 ## Stage 2
 
-* Recursive to Authorative discussion,  Chairs 
+* Recursive to Authorative discussion,  Chairs, 30 min
