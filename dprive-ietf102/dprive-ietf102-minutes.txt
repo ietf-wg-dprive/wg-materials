@@ -1,0 +1,169 @@
+DNS Privacy Exchange (DPRIVE) WG
+IETF 102, Montreal
+
+* Date: Wednesday, 18 July 2017
+* Time: 13:30-15:00 CEST
+* Room: Place du Canada
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+
+Jabber scribe: Dan York
+
+Note-taker: Chris Wood, Sean Turner, and Tomek Mrugalski
+
+
+### Administrivia
+
+Slides:
+https://datatracker.ietf.org/meeting/102/materials/slides-102-dprive-chair-slides-01
+
+DNS-SD is looking for a new chair, contact Terry Manderson if
+interested.
+
+David Schinazi: Shameless plug: DNS-SD is working on better privacy.  Go
+to their Thursday morning session.
+
+Chairs: Padding policy is addressing IESG comments. Moving it soon
+
+* Agenda Bashing, Blue Sheets, etc,  10 min
+
+### Current Working Group Business
+
+* Some analysis of the RIPE Atlas probe data on DNS-Privacy, Brian
+* Haberman, 10 min
+
+Slides:
+https://datatracker.ietf.org/meeting/102/materials/slides-102-dprive-dns-over-tls-measurements-with-ripe-atlas-probes-01.pdf
+
+DNS over TLS was done quickly - way to go RIPE ATLAS folks!
+
+Sara Dickinson: Was 853 blocked?
+Brian: number of connections refused, but there were also timeouts.
+Still need to document them.
+Sara: Can you also do it over 443?
+Brian: Need to look at API.
+
+Daniel Khan Gillmor(DKG): Looks great.  How many of the RIPE probes did
+the servers test?
+Brian: The 41K queries came out of 2500 different probes.  They have
+roughlhy X probes.  Looking at setting queires based on class of probes.
+Going to update stats.
+DKG: Also looking at reachability. 
+Brian: Probe just does a reachability.
+
+* [draft-dickinson-dprive-bcp-op](https://datatracker.ietf.org/doc/draft-dickinson-dprive-bcp-op/)
+
+Slides:
+https://datatracker.ietf.org/meeting/102/materials/slides-102-dprive-rfc-7626bis-00.pdf
+
+Nick Sullivan: what I don't see is traffic analysis.
+Sara: It's there :)
+
+* [draft-bortzmeyer-dprive-rfc7626](https://datatracker.ietf.org/doc/draft-bortzmeyer-dprive-rfc7626-bis/),
+* Sara Dickinson, 25 min
+Barry Greene: We need to break this into two documents.  Missing a
+section on resiliancy, e.g., cables to NZ go down now what?  Operators
+like IoT because they got certificates and you can then see behind the
+NAT.  If you keep everything in one document, folks will never be able
+to fully comply.
+
+Paul Hoffman: It's fine to have it one draft.  What is your timeframe?
+One of the things we've found recenlty is that people do whoziwazts
+unless ...
+
+Sara: We think it's going to be living document.  This is one of the
+reasons we were hesitent to bring it here.  It'll go slow. Huge changes
+expected next year.
+
+Dan York: Like the draft.  It's good to have it here.  Building on work
+of DPRIVE and DOH. Privacy parts feel like it should be it's own
+seperate thing because it's a different audience.
+
+DKG: LIke and appreciate the work.  I think it should all be in one doc.
+
+Lorenzo Colitti: If we want to publish a doc, then publishing one with
+data retention is going to be incredibly hard (wrong people, laws
+change).  We should figure out what we can publish and do that.
+
+Jonathan: What's the plan to get ISPs to work with this draft (right now
+it's targeted at clouds)?
+Sara: Could offer to services.  Which ones is the default is TBD.
+
+Alison Mankin: We are spinning up an IRTF RG about privacy enhanced
+tech.  It might be reasonable for the RG to take this up.  This draft
+could be referenced.
+Sara: Some of this is definitely research.
+
+DKG: We are not writing a legal doc. We should expect to change and
+update the document in time as BCPs change. 
+
+Chairs: We're going to do a WG call for adoption (now). Also read the
+bis draft.
+
+### New Working Group Business
+
+* [draft-annee-dprive-oblivious-dns](https://datatracker.ietf.org/doc/draft-annee-dprive-oblivious-dns/),
+* Nick Feamster, 15 min
+
+Slides:
+https://datatracker.ietf.org/meeting/102/materials/slides-102-dprive-oblivious-dns-00.pdf
+
+DKG: Thanks for this.  I like the framing of it.  How does your threat
+modeal deal with ODNS and recursive being colocated?
+??: WE talked about this at the hackathon.  But, performance suggests
+they be close.  Still lots of questions there.
+
+Tobias: How are you handling DNSSSEC?  Don't we as an ISP get an name
+oracle?
+Nick: : Othoganal and complimentary.  Sure the ISP can see a netflow and
+figure something out.  Shared hosting addresses some of this, but not
+all concerns.  This doesn't make anything worse.
+
+ekr: Interesting idea.  The recursive area free IP anonymizer (yep).
+Surprised how the ODNS key is secured?  Why ECIS and not straight DH?
+Can get you more bytes.
+Nick: We need to talk about how to secure they key.  Great would love
+the bytes!
+
+Barry Greene: Interesting - Increased cost, complexity, and maybe
+fragility.  What security problem are you solving?  There is a
+disconnect with the IETF and the mobile speed requirements.
+Nick: It's a privacy problem not a security problem.  Domain by domain
+solution.
+
+Chris Wood: Concerned that the ODNS server becomes a central point of
+failure?  Can you comment on how this affects caches?
+Nick: It's a concern, but we can think about resiliance but we think
+normal techniques would work.  Caching benefits move to ODNS
+authoritative.  This breaks shared caching?
+Chris Wood: Are there operators who think per-client caching works?
+
+Jinmei Tatuya: This is interesting and hope to see more details about
+how to implement in the next version.  EDNS cannot force recursive
+server to forward OPT RR.  So as long as the protocol relies on EDNS,
+forwarding it should be part of the protocol, not just an implementation
+consideration.
+
+Witold Kręcicki: Are there any meassures against using ODNS server?  Any
+fallback if QN is too long?
+Nick: For fallback - we'd like the group to think about it.  There are
+concerns about profiling.
+
+Dmitry Kohmanyuk (?): Using anycast fine.  how do you rekey?
+NicK: Session keys can be per query.
+
+## Stage 2
+
+* Recursive to Authorative discussion,  Chairs, 30 min
+
+Probably going to need an interim to go over the two main points.
+
+Paul Hoffman: Can we start talking about it on the interim!?
+Chairs: Oh yeah!!  We'll give guidance in the next day or so.
+
+Benno Overeinder: I'll include some operator considerations.
+
+
