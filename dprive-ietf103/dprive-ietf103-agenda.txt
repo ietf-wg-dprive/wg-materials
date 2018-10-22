@@ -1,9 +1,9 @@
 # DNS Privacy Exchange (DPRIVE) WG
 ## IETF 99, Prague
 
-* Date: 
-* Time: 
-* Room: 
+* Date: Wednesday 7 November, 2018
+* Time: 09:00-11:00 IST
+* Room: Meeting 1
 
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
@@ -19,6 +19,12 @@
 
 * Agenda Bashing, Blue Sheets, etc,  10 min
 
-### Current Working Group Business
+### Step 2 Discussion
 
-* 
+* User Perspective,  30 Minutes
+
+* Authorative and Recursive Perspecive, 1 Hour
+
+## Time Remaining 
+
+* draft-bretelle-dprive-dot-for-insecure-delegations, 10 min
