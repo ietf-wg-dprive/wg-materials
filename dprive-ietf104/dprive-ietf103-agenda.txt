@@ -1,0 +1,33 @@
+# DNS Privacy Exchange (DPRIVE) WG
+## IETF 104, Prague
+
+* Date: Friday, 29 March, 2019
+* Time: 10:50-12:50 IST
+* Room: Congress Hall 2
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord: Eric Vyncke
+
+* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+
+---
+## Agenda
+
+### Administrivia
+
+* Agenda Bashing, Blue Sheets, etc,  10 min
+
+### Step 2 Discussion
+
+* Phase 2 requirements and milestones, Overeinder, 30 minutes
+
+* Operational BCP, Dickinson, 20 minutes
+
+* Update on DNS Privacy Considerations, Dickinson, 20 minutes
+
+* DNS Privacy and Applications, Bertola, 10 minutes
+
+* Certificate Discovery for Recursive to Authoritative exchanges, Bretelle, 15 minutes
+
