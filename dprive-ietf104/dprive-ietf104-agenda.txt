@@ -31,3 +31,4 @@
 
 * Certificate Discovery for Recursive to Authoritative exchanges, Bretelle, 15 minutes
 
+* Bootstrapping to discover DoT and DoH servers, Konda, 10 minutes
