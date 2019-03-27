@@ -8,7 +8,7 @@
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
 
-* IESG Overlord: Eric Vyncke
+* IESG Overlord: Eric Vyncke <evyncke@cisco.com>
 
 * [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
 
@@ -22,13 +22,29 @@
 ### Step 2 Discussion
 
 * Phase 2 requirements and milestones, Overeinder, 30 minutes
+    - Action: 
 
-* Operational BCP, Dickinson, 20 minutes
+* Operational BCP
+    - draft-ietf-dprive-bcp-op
+    - Dickinson, 20 minutes
+    - Action: How Far from WGLC?
 
-* Update on DNS Privacy Considerations, Dickinson, 20 minutes
+* Update on DNS Privacy Considerations 
+    - draft-bortzmeyer-dprive-rfc7626-bis
+    - Dickinson, 20 minutes
+    - Action: CfA Sent
 
-* DNS Privacy and Applications, Bertola, 10 minutes
+* DNS Privacy and Applications 
+    - draft-bertola-bcp-doh-clients 
+    - Bertola, 10 minutes
+    - Action: 
 
-* Certificate Discovery for Recursive to Authoritative exchanges, Bretelle, 15 minutes
+* Certificate Discovery for Recursive to Authoritative exchanges 
+    - draft-bretelle-dprive-dot-for-insecure-delegations
+    - Bretelle, 15 minutes
+    - Action: 
 
-* Bootstrapping to discover DoT and DoH servers, Konda, 10 minutes
+* Bootstrapping to discover DoT and DoH servers 
+    - draft-reddy-dprive-bootstrap-dns-server
+    - Konda, 10 minutes
+    - Action: 
