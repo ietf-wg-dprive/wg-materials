@@ -1,0 +1,150 @@
+# DNS Privacy Exchange (DPRIVE) WG
+## Interim
+
+* Date: 10 December 2018
+* Time: 16:00 - 18:00 UTC
+* Room: 
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+
+* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+
+---
+## Agenda
+
+### Meeting logistics (scribes, jabber, etc.)
+    Tim Wicinski - minutes
+
+### Interim objectives
+
+
+### Discussion of requirements/goals for DNS privacy between recursive resolvers and authoritative servers
+
+Benno Discusses https://trac.ietf.org/trac/dprive/wiki/DPriveStage2
+
+Paul Wouters: Anonymous DNS vs Authenicated Queries ? 
+
+Paul Hoffman: Edited wording on connection/connectionless text submitted by Erik Nygren. 
+
+Mukund:  Cost of TLS connections.  Resolver makes several requests in sequence in HTTPS. 
+Cost of TLS over UDP will significantly hamper end user experience. 
+
+Stephen Farrell:  Zone Owners/Registrant have a perspective. 
+
+PW:  How far to go to prevent it not being blocked? 
+
+Jon Reed:  Discussion with pros/cons on where to draw the line on these. 
+
+Karl Henderson:  No TLS between of recursive /auth unless stub/recursive
+
+DKG: Cut these use cases functionally. 
+
+SF:  why should stub/recursive TLS be required for  recursive/authoratittive? 
+
+BH:  
+
+SF: Should not be a protocol requirements
+
+DKG: Do you have to treat your cache differently if receive over private vs non-private link 
+
+JR: Discuss out-of-baliwicks authorities 
+
+Wes Hardeker:  
+
+Mukund:  Security and Privacy 
+
+DKS: recursive resolver just been stood up. being observed. 
+
+PH: Two Caches with different privacy.  Don't propose to do this work
+
+MS: Two different caches, data resolvers learned over the different transport. 
+
+### Large Root/TLD Operator observations, Henderson
+
+Recursive vs Authorative: users can't avoid a work around. 
+Should focus on availability
+
+look at: 
+- DNS-over-TLS
+- performance, attack vectors
+- authorative profile  
+
+DKG: Focus on DoT is reasonable. 
+
+TW: Similar to DNSEC? 
+
+KH: New attack vectors, etc. 
+
+DKS: What new attacks
+
+KH: DDoS
+
+DKS: Give clear guidance on balancing availability over privacy 
+
+PH: Use case then becomes opportunistic. 
+
+DKG: Don't Agree
+
+PH: I said opportunistic not none 
+
+DKG: 
+
+WH: Explicity named secondary
+
+DKS: Functional Split to signal availability 
+How do we signal availability? 
+- not at all, opportunistic try 
+- per zone, 
+- per nameserver, 
+- per IP Address 
+
+SF:  Inheritance for subdomains 
+
+KH: Capability signaling that tony finch is working
+
+DKG:  specifically formed domain names. 
+
+WH: clarifying question - only use to put in name to get speed 
+
+DKG: Name propogated already (glue, etc)
+
+PH: 63 character library limits for 
+
+Russ: 
+
+### Next steps
+
+Tim Wicinski
+Brian Haberman
+
+Alex Mayrhofer
+Beno Overeinder
+Brett Carr 
+Dan York
+Daniel Kahn Gillmor
+Duane Wessels
+John Dickinson
+Jon Reed (Akamai)
+Karl Henderson
+Kazunori Fujiwara
+Logan? 
+Manu Bretelle
+Mukund Sivaraman
+Nabarun Biswas
+Paul Hoffman
+Paul Wouters
+Peter Koch
+Petr Spacek
+Richard Wilhelm
+Russ Housley
+Sean Turner
+Shumon Huque
+Stephen Farrell
+Theresa Enghardt
+Wes Hardaker
+Warren Kumari 
+Austin Hounsel 
+
