@@ -1,14 +1,14 @@
 # DNS Privacy Exchange (DPRIVE) WG
-## IETF 99, Prague
+## IETF 105, Montreal
 
-* Date: 
-* Time: 
-* Room: 
+* Date: 2019-07-25
+* Time: 15:50 EDT
+* Room: Viger
 
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
 
-* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+* IESG Overlord: Éric Vyncke <evyncke@cisco.com>
 
 * [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
 
@@ -21,4 +21,24 @@
 
 ### Current Working Group Business
 
-* 
+* Recommendations for DNS Privacy Service Operators
+     - draft-ietf-dprive-bcp-op
+     - Authors
+     - 25 minutes
+
+* DNS Privacy Considerations
+     - draft-ietf-dprive-rfc7626-bis
+     - Authors
+     -25 minutes 
+
+### AOB
+
+* DNS Zone Transfers over TLS
+     - draft-hzpa-dprive-xfr-over-tls
+     - Zhang, H.
+     - 15 minutes
+
+* Using Early Data in DNS over TLS
+     - draft-ghedini-dprive-early-data
+     - Ghedini, A.
+     - 10 minutes
