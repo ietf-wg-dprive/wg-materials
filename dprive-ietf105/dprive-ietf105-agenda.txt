@@ -29,12 +29,17 @@
 * DNS Privacy Considerations
      - draft-ietf-dprive-rfc7626-bis
      - Authors
-     -25 minutes 
+     - 5 minutes 
 
 ### AOB
 
 * DNS Zone Transfers over TLS
      - draft-hzpa-dprive-xfr-over-tls
+     - Zhang, H.
+     - 15 minutes
+
+* DNS Zone Transfer using DNS Stateful Operations
+     - draft-zatda-dprive-xfr-using-dso
      - Zhang, H.
      - 15 minutes
 
