@@ -47,3 +47,8 @@
      - draft-ghedini-dprive-early-data
      - Ghedini, A.
      - 10 minutes
+
+* Bootstrapping Procedure to Discover and Authenticate DNS-over-(D)TLS and DNS-over-HTTPS Servers 
+     - draft-reddy-dprive-bootstrap-dns-server
+     - Richardson, M 
+     - 10 minutes
