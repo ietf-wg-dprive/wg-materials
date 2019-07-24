@@ -52,3 +52,8 @@
      - draft-reddy-dprive-bootstrap-dns-server
      - Richardson, M 
      - 10 minutes
+
+* Deploying DNS-over-TLS on Authoritative Servers
+     - draft-hal-adot-operational-considerations
+     - April, T.
+     - 5 minutes (if available)
