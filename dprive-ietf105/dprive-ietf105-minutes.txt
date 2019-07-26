@@ -1,0 +1,89 @@
+
+DNS Privacy Exchange (DPRIVE) WG
+IETF 105, Montreal
+2019-07-25 15:50 local time
+Chairs: Brian Haberman and Tim Wicinski
+Suzanne Woolf sitting in for Tim
+Minutes by Paul Hoffman
+Things said on slides or during presentations are not reproduced here
+
+Chairs introduction
+https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-chairs-slides-01
+
+Using Early Data in DNS over TLS, draft-ghedini-dprive-early-data, Alessandro Ghedini
+https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-using-early-data-in-dns-over-tls-draft-ghedini-dprive-early-data-00
+Stéphane Bortzmeyer: The exmples should be RRtypes
+Karl Henderson: Are there side-channel attacks with replay?
+Alessandro: DKG commented on this earlier, need to add more
+
+Recommendations for DNS Privacy Service Operators, draft-ietf-dprive-bcp-op, Roland van Rijswijk-Deij 
+https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-draft-ietf-dprive-bcp-op-00
+Think they are ready for WG Last Call, but it would be a living document
+Maybe do a -bis in two years
+Paul Hoffman: Chrome will have a TRR, should we wait for that? Not sure.
+Brian: Please read both this one and rfc7626-bis so we can decide when to do WG Last Call
+
+DNS Zone Transfers over TLS, draft-hzpa-dprive-xfr-over-tls, Pallavi Aras and Han Zhang
+https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-dns-zone-transfer-over-tls-xot-01
+Draft suggests to reuse the TLS session open instead of opening for each XOT-based IXFR
+Wes Hardaker: Glad this is being documented. Are you adding anything new?
+Pallavi: Correct, just new transports
+Willem Toorop: Improves on current AXFR by suggesting better operations such as pipelining
+Ben Kaduk: Should always use secure transports for sensitive data
+Doesn't think you need to force TLS 1.3
+Roland: If you keep the session open for multiple XFRs, you will signal that there is relationship between the two parties
+Maybe consider making shorter
+Willem: There might not be much of a relationship
+Allison Mankin: Natural proposed standard because it updates current ones
+Daniel Kahn Gillmor: If you use TLS 1.3 you can get the session keys for future sessions based on 0RTT
+Padding is useful for confidentiality
+Think of padding as framing for the TLS records
+Wes: Wants "MUST be TSIG protected", but if they don't care what the name is, it might be optional
+Pallavi: Actually, want it for the performance
+Sean Turner: Make TLS 1.3 mandatory
+Daniel: Agrees
+
+DNS Zone Transfer using DNS Stateful Operations, draft-zatda-dprive-xfr-using-dso, Willem Toorop and Sara Dickinson
+     https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-zone-transfer-using-dso-xud-01
+     Matt Pounsett: Definite interest
+     It is fine to allow support for TLS, but not require it
+Mattijs Mekking: Could be thousands of subscriptions
+Could be additional features
+Think about the scope of the document
+Supports this work
+Sara: DSO is extensible so can add TLVs later
+Ted Hardie: Question of making TLS optional
+Encrypt at all times
+Require TLS
+Petr Špaček: Doesn't think is should be this one
+Should do a proper transfer protocol 
+Not in favor of this at all
+Willem: Almost existing transport
+Daniel: Must be TLS
+Why use TSIG in this? Weird mix of things
+Willem: TSIG is end-to-end, might go through proxies
+TSIG is replayable
+Sets off his warning flags
+Willem: would allow the primary to authenticate the secondary
+Matt: I trust you to transfer this zone and I don't care when you are transfering from
+Doesn't care about TLS authentication
+Likes having TSIG for client authentication
+Pallavi: TSIG gives data authenticity
+Wes: Two halves: push notification / secure
+Should be DNSOP, this feels like the wrong place
+Puneet Sood: Agrees with Petr, wants to start from a zone transfer design
+Brian: Will talk with Tim about how to proceed
+
+Bootstrapping Procedure to Discover and Authenticate DNS-over-(D)TLS and DNS-over-HTTPS Servers, draft-reddy-dprive-bootstrap-dns-server, Michael Richardson
+https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-bootstrapping-procedure-to-discover-and-authenticate-dot-and-doh-servers-v2-00
+Sean: Do you really need a new certificate extension?
+Michael: Yes, for policy, but maybe we need to be in that space
+Michael: Not sure if they even want this adopted yet, maybe too nebulous at this point
+Michael was speaking about: https://datatracker.ietf.org/doc/draft-peterson-dot-dhcp/ 
+which is from Thomas Peterson, not Thomas Fossati!
+
+Deploying DNS-over-TLS on Authoritative Servers, draft-hal-adot-operational-considerations, Tim April
+https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-authoritative-dns-over-tls-operational-considerations-draft-hal-adot-operational-considerations-00
+Has a discussion of how to discover if the server is running DoT
+Karl: Also thinking about downgrade prevention
+
