@@ -87,3 +87,28 @@ https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-authoritati
 Has a discussion of how to discover if the server is running DoT
 Karl: Also thinking about downgrade prevention
 
+## Chairs Actions 
+
+# dprive-ietf105-actions.txt
+
+* draft-ietf-dprive-bcp-op
+    - Authors feel ready for WGLC
+
+* draft-ietf-dprive-rfc7626-bis
+    - WGLC ?
+
+* draft-hzpa-dprive-xfr-over-tls
+    - should do a CfA
+
+* draft-zatda-dprive-xfr-using-dso
+    - Needs work 
+
+* draft-ghedini-dprive-early-data
+    - Nothing at this time
+
+* draft-reddy-dprive-bootstrap-dns-server
+    - Nothing at this time
+
+* draft-hal-adot-operational-considerations
+    - Nothing at this time
+
