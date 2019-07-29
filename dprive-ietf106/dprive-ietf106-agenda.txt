@@ -1,0 +1,24 @@
+# DNS Privacy Exchange (DPRIVE) WG
+## IETF 99, Prague
+
+* Date: 
+* Time: 
+* Room: 
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+
+* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+
+---
+## Agenda
+
+### Administrivia
+
+* Agenda Bashing, Blue Sheets, etc,  10 min
+
+### Current Working Group Business
+
+* 
