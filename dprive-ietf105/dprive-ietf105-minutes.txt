@@ -10,6 +10,9 @@ Things said on slides or during presentations are not reproduced here
 Chairs introduction
 https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-chairs-slides-01
 
+* draft-bradley-dnssd-private-discovery
+* draft-huitema-dnssd-tls-privacy
+
 Using Early Data in DNS over TLS, draft-ghedini-dprive-early-data, Alessandro Ghedini
 https://datatracker.ietf.org/meeting/105/materials/slides-105-dprive-using-early-data-in-dns-over-tls-draft-ghedini-dprive-early-data-00
 Stéphane Bortzmeyer: The exmples should be RRtypes
@@ -112,3 +115,8 @@ Karl: Also thinking about downgrade prevention
 * draft-hal-adot-operational-considerations
     - Nothing at this time
 
+* draft-bradley-dnssd-private-discovery
+    - bring over from DNSSD ? 
+
+* draft-huitema-dnssd-tls-privacy
+    - bring over from DNSSD ? 
