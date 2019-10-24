@@ -1,0 +1,44 @@
+# DNS Privacy Exchange (DPRIVE) WG
+## Virtual Interim
+
+* Date: 2019-10-29
+* Time: 15:00 UTC
+* Room:    Meeting link: https://ietf.webex.com/ietf/j.php?MTID=mef8a120843978b6b02ce66dd810114a0
+           Meeting number: 641 721 607
+           Password: A4hJ7v7i
+
+* Chair: Tim Wicinski <tjw.ietf@gmail.com>
+* Chair: Brian Haberman <brian@innovationslab.net>
+
+* IESG Overlord: Éric Vyncke <evyncke@cisco.com>
+
+* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+
+---
+## Agenda
+
+### Administrivia
+
+* Agenda Updates, Blue Sheets, etc,  10 min
+
+### Current Working Group Business
+
+* Recommendations for DNS Privacy Service Operators
+     - draft-ietf-dprive-bcp-op
+     - Authors
+     - Resolve WGLC comments
+
+* DNS Privacy Considerations
+     - draft-ietf-dprive-rfc7626-bis
+     - Authors
+     - Resolve WGLC comments
+
+### New Work
+
+* Recursive to Authoritative Privacy Requirements
+     - Draft forthcoming
+     - Authors
+
+* DNS Zone Transfers over TLS
+     - draft-hzpa-dprive-xfr-over-tls
+     - Authors
