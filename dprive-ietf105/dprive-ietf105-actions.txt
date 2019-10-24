@@ -1,0 +1,22 @@
+# dprive-ietf105-actions.txt
+
+* draft-ietf-dprive-bcp-op
+    - Authors feel ready for WGLC
+
+* draft-ietf-dprive-rfc7626-bis
+    - WGLC ?
+
+* draft-hzpa-dprive-xfr-over-tls
+    - should do a CfA
+
+* draft-zatda-dprive-xfr-using-dso
+    - Needs work 
+
+* draft-ghedini-dprive-early-data
+    - Nothing at this time
+
+* draft-reddy-dprive-bootstrap-dns-server
+    - Nothing at this time
+
+* draft-hal-adot-operational-considerations
+    - Nothing at this time
