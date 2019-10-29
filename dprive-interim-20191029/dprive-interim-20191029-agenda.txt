@@ -36,7 +36,7 @@
 ### New Work
 
 * Recursive to Authoritative Privacy Requirements
-     - Draft forthcoming
+     - draft-lmo-dprive-phase2-requirements
      - Authors
 
 * DNS Zone Transfers over TLS
