@@ -10,7 +10,7 @@
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
 
-* IESG Overlord: Éric Vyncke <evyncke@cisco.com>
+* Responsible AD: Éric Vyncke <evyncke@cisco.com>
 
 * [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
 
