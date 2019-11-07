@@ -29,56 +29,15 @@
      - Authors
      - Resolve WGLC comments
 
-Sara Dickson: All issues 
+Sara Dickson: All issues addressed. 
+
+Action: Move forward
 
 
 * Recommendations for DNS Privacy Service Operators
      - draft-ietf-dprive-bcp-op
      - Authors
      - Resolve WGLC comments
-
-Few minor changes
-Stephen Farrel's changes 
-Significant Issue - inclusion of text around consent. 
-Question is should we be addressing this in this draft. 
-
-last version drop statement "won't do X without your consent"
-new item requested operator policy for consent. 
-
-SF: Document is nearly Ok but not fully Ok. 
-operators can get consent when they can't get consent. 
-SD: Most policy documents do use this language.
-maybe this can be couche.d 
-
-BH: Teased out of the conversation, service provider consent 
-does not capture user provider agreement in place.
-better delination between the two points. 
-
-Ben Scwartz:  BCP should observed practices more than once, working well.
-
-BS: 
-SF:  Does consent exist? it's a DNS Query
-BS: NextDNS (nextdns.io) - customized recursive operations as a service
-
-Ralf Weber: A corner case
-BS:  BCP should reflect practices we observe. Quesiton on consent language. 
-SD: Open Resolvers use this exact language, claim a consent model. 
-Brian Dickson: Consent is moot 
-SF: Many things on the web claim consent.
-Allison Mankin:  Maybe what you want is "we don't believe" make this a strong 
-statement. Don't assume or talk about it until you know more. 
-
-SF: If we drop the consent. 
-SD: Dropping 6 of 6.1.2
-BS: Using Quad-9 as example, 
-SD: Cloudflare's privacy statement
-SF: It's Waffle. 
-Jason Livingood:  What's the agreement with a browser pointing to Cloudflare
-Alex Mayrhofer: 
-
-BD: Maybe restructure the text
-AM: Look at Appendix C.2 text
-SF: 
 
 Action:  Chairs will follow up on Consent Discussion. 
 
@@ -90,16 +49,14 @@ Action:  Chairs will follow up on Consent Discussion.
 
 Alex Mayerhof presenting
 
-RW: Disagree with requirements. Make as simple as possible with DNS model
 
-Alex: sjhould not differenate between TLD and SLD 
+Action: WG Document info ONLY 
 
-RW: Large DNS deployments do not appear on internet
-
-BD: QNAME min reduces need for DoT to DoT 
-
-BS: QNAME min should be mandatory.  Others are operational requirements
 
 * DNS Zone Transfers over TLS
      - draft-hzpa-dprive-xfr-over-tls
      - Authors
+
+Action:  Call for Adoption Issued
+
+
