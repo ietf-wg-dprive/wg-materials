@@ -1,5 +1,5 @@
 # DNS Privacy Exchange (DPRIVE) WG
-## IETF 99, Prague
+## IETF ##, XXXX
 
 * Date: 
 * Time: 

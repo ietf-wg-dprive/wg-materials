@@ -8,3 +8,20 @@
     - Time Requested:  
 
 ## Requests
+
+*   Draft name:  draft-pauly-dprive-adaptive-dns-privacy
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-pauly-dprive-adaptive-dns-privacy/
+    - Requester Email: draft-pauly-dprive-adaptive-dns-privacy@ietf.org
+    - Time Requested:  20
+
+*   Draft name:  draft-pauly-dprive-oblivious-doh
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/
+    - Requester Email: draft-pauly-dprive-oblivious-doh@ietf.org
+    - Time Requested:  20
+
+*   Draft name:  draft-lmo-dprive-phase2-requirements
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-lmo-dprive-phase2-requirements/
+    - Requester Email: draft-lmo-dprive-phase2-requirements@ietf.org
+    - Time Requested:  
+
+

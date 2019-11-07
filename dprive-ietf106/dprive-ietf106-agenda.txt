@@ -1,14 +1,14 @@
 # DNS Privacy Exchange (DPRIVE) WG
-## IETF 99, Prague
+## IETF 106, Singapore
 
-* Date: 
-* Time: 
-* Room: 
+* Date: 22 November 2019
+* Time: 1000-1200 SST 1500-1700 UTC
+* Room: Collyer
 
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
 
-* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+* Very Responsible Area Director: Éric Vyncke <evyncke@cisco.com>
 
 * [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
 
@@ -19,6 +19,23 @@
 
 * Agenda Bashing, Blue Sheets, etc,  10 min
 
+### New Working Group Business
+
+*   Draft name:  Adaptive DNS: Improving Privacy of Name Resolution
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-pauly-dprive-adaptive-dns-privacy/
+    - Authors
+    - Time Requested:  20
+
+*   Draft name:  Oblivious DNS Over HTTPS
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/
+    - Authors
+    - Time Requested:  20
+
 ### Current Working Group Business
 
-* 
+*   Draft name:  DNS Privacy Requirements for Exchanges between Recursive Resolvers and Authoritative Servers
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-lmo-dprive-phase2-requirements/
+    - Authors
+    - Time Requested:  70
+
+
