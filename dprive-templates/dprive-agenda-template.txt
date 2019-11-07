@@ -8,7 +8,7 @@
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
 
-* IESG Overlord:  Terry Manderson <terry.manderson@icann.org>
+* Very Responsible Area Director: Éric Vyncke <evyncke@cisco.com>
 
 * [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
 
