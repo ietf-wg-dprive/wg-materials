@@ -21,21 +21,21 @@
 
 ### New Working Group Business
 
-*   Draft name:  Adaptive DNS: Improving Privacy of Name Resolution
-    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-pauly-dprive-adaptive-dns-privacy/
+*   Adaptive DNS: Improving Privacy of Name Resolution
+    - https://datatracker.ietf.org/doc/draft-pauly-dprive-adaptive-dns-privacy/
     - Authors
-    - Time Requested:  20
+    - 20min
 
-*   Draft name:  Oblivious DNS Over HTTPS
-    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/
+*   Oblivious DNS Over HTTPS
+    - https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/
     - Authors
-    - Time Requested:  20
+    - 20min
 
 ### Current Working Group Business
 
-*   Draft name:  DNS Privacy Requirements for Exchanges between Recursive Resolvers and Authoritative Servers
-    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-lmo-dprive-phase2-requirements/
+*   DNS Privacy Requirements for Exchanges between Recursive Resolvers and Authoritative Servers
+    - https://datatracker.ietf.org/doc/draft-lmo-dprive-phase2-requirements/
     - Authors
-    - Time Requested:  70
+    - 70min
 
 
