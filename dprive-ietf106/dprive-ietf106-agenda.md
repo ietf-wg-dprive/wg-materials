@@ -42,5 +42,3 @@
     - https://datatracker.ietf.org/doc/draft-lmo-dprive-phase2-requirements/
     - Authors
     - 70 min
-
-

@@ -1,0 +1,162 @@
+DPRIVE WG
+IETF 106, Singapore
+Chairs: Tim Wicinski, Brian Haberman (remote)
+Minutes taken by Paul Hoffman
+Text from slides not given here
+
+Admiistrivia
+
+Adaptive DNS: Improving Privacy of Name Resolution
+draft-pauly-dprive-adaptive-dns-privacy
+Tommy Pauly
+	Tim: Which list for discussion?
+	Tommy: Both
+	Brian Dickson: GoDaddy will turn on DNSSEC signing for all customers
+	Alex Mayrhofer: Get into a grey area of what is recursive and what is authoritative
+		We should be careful
+		Could instead use a URI RR
+		Tommy: URI RR doesn't let you say what the semantics of the value is
+			Do we want to put DoH in front of main authoritative servers?
+		Alex: Maybe like hosts.txt made modern
+	Petr Špaček: Custom made Tor network with DNS on top
+		Tommy: It is possible to build to deploy with bad privacy prolicies
+	Stephen Farrel: Maybe being too optimistic
+		How will a client choose the oblivious feature?
+		Tommy: Looking for an assertion between two zones
+		Stephen: Needs a lot more specification
+	Lawrence Colitti: Duplicated information from the HTTPSVC record
+		Tommy: It is a hint where to go look
+		Gives a way to know which additional domains to look
+		Pushing over HTTP2 at the same time
+		Lawrence: Why tie oblivious with the other parts?
+	Ben Schwartz: We should be thinking more about architecture
+		Likes the idea of mixing recursive and authitative
+		Mode-switching resolver
+	Ralf Weber: Encourage to look into other transports
+	Vittorio Bertola: Does this actually give more privacy?
+		Wants to see more analysis on this
+		Thinks it reduces privacy
+		Tommy: Definitely has a relationship with the name that they are going to
+			Is about to connect to the same address
+	Tim: Part of this falls into DPRIVE charter
+		Move this here instead of ADD		
+
+Oblivious DNS Over HTTPS
+draft-pauly-dprive-oblivious-doh
+Chris Wood
+	Paul Hoffman: Make this oblivious HTTP, do it somewhere else
+	RalfW: Gets scared of network of open proxies
+		Could be abused to kill DoH servers
+		Chris: Doesn't make this worse
+	Tiru Reddy: Why not just use a VPN instead
+		Chris: That is another type of proxy
+	Petr: ?
+	Stephen: Of two minds; maybe just do a Tor-ish thing, maybe a purely DNS thing
+	Mike Bishop: If you proxy is far from the client, you will get worse location information
+		Tor uses consistent node
+	Lawrence: Bear in mind latency
+		DNS is lightweight at the moment, could get overwhelmed by size of TLS
+	Brian: Have you looked at three-way party encryption?
+
+DNS server privacy policy with assertion token
+draft-reddy-dprive-dprive-privacy-policy
+Tiru Reddy
+	Paul Wouters: Seem reinvention of EV certs for DNS
+	Mark Nottingham: Explore why P3P efforts failed
+		Why should need to learn new kinds of consent model
+	Ben: Supportive of idea of geting opaque human-readable information about a DNS server
+		Statiing as a privacy policy takes it into difficult domain
+		Machine-readable formatting is not going to work
+		Trying to reduce legal language to machine-readable language is hard
+		Need exceptions
+		Is happy to have just a URL
+		Tiru: Wants to have both
+	Vitorrio: Finds it useful
+		Will needs to merge with user provisioning
+	Eric Rescorla: How will this work in practice?
+		(Walks through scenario)
+		Web PKI is based on mechanical comparision of domain names, not user comparison
+		Browsers are moving away from this
+	Alissa Cooper: This has been tried in many places
+		Invokes GEOPRIV
+		Need to look elsewhere
+
+DNS Privacy Requirements for Exchanges between Recursive Resolvers and Authoritative Servers
+draft-lmo-dprive-phase2-requirements
+Alex Mayrhofer and Jason Livingood
+	Section 4:
+		Eric: Needs to discuss downgrade
+		Petr: Maybe say that attacker that has access to all traffic should be out of scope
+		Ben: Think about CAA, ACME, and DV certificates
+			Don't create circular dependency
+	Is DoT always required?
+		Ben: Should define protocol and compare to other protocols
+			We can't tell you to do DoT
+		Eric: We encourage if you know that there is encryption available
+			QNAME is not in the same equivalence class
+			Alex: Rephrase to "secure transport" instead of DoT
+		Wes Hardaker: Not about requirements, but about solutions
+			Is encryption required? If so, how do we bootstrap?
+		RalfW: Secure from bootstrapping all the way down
+		Brian: Break out distinct aspects of this
+			Delegation chain signed or not
+			Use of DANE needs secure delegation all the way down
+			Mandatory-to-implement
+	Trust anchors and security
+		Eric: Please don't get into this
+		Ben: This is not the right level of requirements
+			This gets into the solution space
+			Use comparisons for requirements
+		Eric: Many types of settings
+			Out-of-band settings
+			Discover keys during chain exploration
+			Opportunistic discovery: it is what it is
+		Christian Huitema: Scared about circular dependencies between parties
+			Should be in requirements to not have loops
+		Brian: This is what is agreed on between resolver and authoritative
+		Daniel Kahn Gilmore: Might want hybridized DANE + Web PKI + third parties
+			Solution needs to be simple enough to be analyzable
+			Likes Eric's three-levels
+			There are time limits on all of these
+			Happy eyeballs might give you something more verifiable in time
+		Tim: We are staying away from Web PKI completely
+			Paul: Disagrees
+		Eric: Something like HSTS with time bounding
+		Daniel: Thinks line is hard to determine
+		Brian: Pinned things needs to honor what's in the DNS itself or it breaks the security model
+	Downgrade prevention and preferences
+		Eric: Doesn't think client specification works
+			Only thing that can be plasusibly say is here is DoT and here is not-DoT, need to pick
+			"I speak DoT all the time" vs. "I speak DoT some of the time"
+		Ben: Stub should be able to require anything of the recursive
+			If the stub can't prove this, don't ask it
+			Gets strange very quicky
+				What does this mean for recursive cache
+				If the roots don't do DoT
+				If the resolver got the root zone some way
+		RalfW: If the client wants to make an assertion, do it itself
+			Don't make it more complicated
+		Patrick McManus: One more +1
+		Daniel: Like "require TLS" in SMTP
+			Think about deployment history
+		Wes: RFC 7672
+			Has good fallback logic
+		Brian: +1 to what Wes just said
+			Maybe give guidance for happy eyeballs
+		Patrick: Put more emphasis on secure discovery
+	Discovery
+		Brian: Has to be in the DNS, has to be DNSSEC signed
+			Linked to the name server
+		Wes: We have a distributed hierarchical data model: why use anything else
+		Eric: In the DNS
+	Tim: Do some updates, then the WG will adopt it
+	Brian: From a high level, make a distinction what the value proposition of mandatory vs. good
+	Stephen: When do you want people put in proposals
+	Brian: If anyone is interested in testing, see him
+	Tim: Open to having another interim in February
+	Patrick: Is this is an interal document
+		Would look differently 
+	Paul: NSs that have different operations, some with DoT some without
+	Eric: Don't publish this document as an RFC
+	Brian: Get names from delegation, not from glue
+	
