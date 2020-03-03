@@ -6,9 +6,11 @@ Chairs:
   - Tim Wicinski
   - Brian Haberman
 
-Area Director: Terry Manderson
+Area Director: Éric Vyncke
 
 Mailing List: https://www.ietf.org/mailman/listinfo/dns-privacy
+
+Contributing:  https://github.com/DPRIVE/wg-materials/blob/master/CONTRIBUTING.md
 
 # Note Well
 
