@@ -1,9 +1,9 @@
 # DNS Privacy Exchange (DPRIVE) WG
-## IETF 107, XXXX
+## IETF 107
 
-* Date: 
-* Time: 
-* Room: 
+* Date: 24 March 2020
+* Time: 1550-1720 PDT, 2250-0020 UTC
+* Room: Plaza B/C
 
 * Chair: Tim Wicinski <tjw.ietf@gmail.com>
 * Chair: Brian Haberman <brian@innovationslab.net>
