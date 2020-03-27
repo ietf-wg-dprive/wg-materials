@@ -21,3 +21,8 @@
     - Time Requested:  15
     - Chairs Action: Adopt?
 
+*   Draft name:  Signaling resolver's filtering policies
+    - Datatracker URL:  https://datatracker.ietf.org/doc/draft-mglt-add-signaling-filtering-policies/
+    - Requester Email: draft-mglt-add-signaling-filtering-policies@ietf.org
+    - Time Requested:  15
+
