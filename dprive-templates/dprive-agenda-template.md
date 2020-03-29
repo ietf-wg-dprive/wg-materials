@@ -1,24 +1,30 @@
+---
+title:
+---
 # DNS Privacy Exchange (DPRIVE) WG
-## IETF ##, XXXX
+### IETF ##, XXXX
 
 * Date: 
 * Time: 
 * Room: 
 
-* Chair: Tim Wicinski <tjw.ietf@gmail.com>
-* Chair: Brian Haberman <brian@innovationslab.net>
+### Chairs
+* Tim Wicinski <tjw.ietf@gmail.com>
+* Brian Haberman <brian@innovationslab.net>
 
-* Very Responsible Area Director: Éric Vyncke <evyncke@cisco.com>
+### Very Responsible Area Director
+* Éric Vyncke <evyncke@cisco.com>
 
-* [DataTracker](https://datatracker.ietf.org/group/dprive/documents/)
+### DataTracker
+* https://datatracker.ietf.org/group/dprive/documents/
 
----
+#
 ## Agenda
 
 ### Administrivia
-
-* Agenda Bashing, Blue Sheets, etc,  10 min
+    * Agenda Bashing, Blue Sheets, etc,  10 min
 
 ### Current Working Group Business
 
-* 
+
+### New Working Group Business
