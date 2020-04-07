@@ -36,7 +36,7 @@ As a reminder:
    accordance with the IETF Privacy Statement.
 
  * As a participant or attendee, you agree to work respectfully with other 
-   participants; please contact the ombudsteam (https://www.ietf.org/contact/ombudsteam/) 
+   participants; please contact the [ombudsteam](https://www.ietf.org/contact/ombudsteam/) 
    if you have questions or concerns about this.
 
 Definitive information is in the documents listed below and other IETF BCPs. 
@@ -48,4 +48,4 @@ For advice, please talk to WG chairs or ADs:
   * [BCP 54](https://www.rfc-editor.org/info/bcp54) (Code of Conduct)
   * [BCP 78](https://www.rfc-editor.org/info/bcp78) (Copyright)
   * [BCP 79](https://www.rfc-editor.org/info/bcp79) (Patents, Participation)
-  * https://www.ietf.org/privacy-policy/ (Privacy Policy)
+  * [Privacy Policy](https://www.ietf.org/privacy-policy/)
