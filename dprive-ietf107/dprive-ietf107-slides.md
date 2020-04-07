@@ -1,27 +1,30 @@
 ---
 title: DNS Privacy (DPRIVE) Interim
 ---
+
+ > DNS Privacy (DPRIVE)
+
 # Welcome to DPRIVE
 
-### IETF 107 Interim
+### IETF Interim interim-2020-dprive-01
 
 * Date: 8 April 2020
 * Time: 1600-1730 UTC
-* WebEx: <https://ietf.webex.com/ietf/j.php?MTID=m342b913bf84bd74824d9dec9b153b872>
+* Webex: [https://ietf.webex.com/ietf/j.php?MTID=m342b913bf84bd74824d9dec9b153b872](https://ietf.webex.com/ietf/j.php?MTID=m342b913bf84bd74824d9dec9b153b872)
 
 ###
-* Jabber:  <dprive@jabber.ietf.org>
-* EtherPad: <https://etherpad.ietf.org:9009/p/interim-2020-dprive-01>
+* Jabber:  [dprive@jabber.ietf.org](dprive@jabber.ietf.org)
+* EtherPad: [https://etherpad.ietf.org:9009/p/interim-2020-dprive-01](https://etherpad.ietf.org:9009/p/interim-2020-dprive-01)
 
 ### Chairs
-* Tim Wicinski <tjw.ietf@gmail.com>
-* Brian Haberman <brian@innovationslab.net>
+* Tim Wicinski [tjw.ietf@gmail.com](tjw.ietf@gmail.com)
+* Brian Haberman [brian@innovationslab.net](brian@innovationslab.net)
 
 ### Very Responsible Area Director
-* Eric Vyncke <evyncke@cisco.com>
+* Eric Vyncke [evyncke@cisco.com](evyncke@cisco.com)
 
 ### Datatracker
-* <https://datatracker.ietf.org/group/dprive/documents/>
+* [Documents](https://datatracker.ietf.org/group/dprive/documents/)
 
 # Note Well
 
@@ -58,29 +61,53 @@ Definitive information is in the documents listed below and other IETF BCPs. For
 
 # Agenda
 
-### Administrivia
-    * Agenda Bashing, Blue Sheets, etc,  10 min
+## Agenda Bashing, Blue Sheets
+
+## Document Updates
+
+## Current Working Group Business
+
+## New Working Group Business
+
+# 
+
+ > Document Updates
 
 # Document Updates
 
-### Current Working Group Business
+### draft-ietf-dprive-rfc7626-bis
+    - Revised I-D 
+
+### draft-ietf-dprive-bcp-op
+    - Waiting on  rfc7626-bis
+
+### draft-ietf-dprive-phase2-requirements
+    - Tim to work with authors on making progress
+
+### draft-ietf-dprive-xfr-over-tls
+    - Document has open comments 
+
+# Agenda 
+
+## Current Working Group Business
 
 ####   DNS over Quic
-    - <https://datatracker.ietf.org/doc/draft-huitema-quic-dnsoquic/>
-    - Christian Huitema, 15min
-    - Chairs Action: Adopt?
+
+* [draft-huitema-quic-dnsoquic](https://datatracker.ietf.org/doc/draft-huitema-quic-dnsoquic/)
+*  Christian Huitema, 15min
+*  Chairs Action: Adopt?
 
 ####   Using Early Data in DNS over TLS
-    - <https://datatracker.ietf.org/doc/draft-ghedini-dprive-early-data/>
-    - Alessandro Ghedini, 15 min
-    - Chairs Action: Adopt?
+* [draft-ghedini-dprive-early-data](https://datatracker.ietf.org/doc/draft-ghedini-dprive-early-data/)
+* Alessandro Ghedini, 15 min
+* Chairs Action: Adopt?
 
-### New Working Group Business
+## New Working Group Business
 
-####   Signaling resolver's filtering policies
-    - <https://datatracker.ietf.org/doc/draft-mglt-add-signaling-filtering-policies/>
-    - Daniel Migault, 15min
-    - Chairs Action: ?
+####  Signaling resolver's filtering policies
+* [draft-mglt-add-signaling-filtering-policies](https://datatracker.ietf.org/doc/draft-mglt-add-signaling-filtering-policies/)
+* Daniel Migault, 15min
+* Chairs Action: ?
 
 # Reference
 
@@ -103,6 +130,6 @@ need to unmute yourself to speak when called.
 The IETF has prepared a couple of documents to help get everyone ready,
 including a reminder that you need to register for IETF107 as a remote participant to join remotely.
 
-  <https://www.ietf.org/how/meetings/107/session-participant-guide/>
+  https://www.ietf.org/how/meetings/107/session-participant-guide/
 
-  <https://www.ietf.org/how/meetings/107/session-presenter-guide/>
+  https://www.ietf.org/how/meetings/107/session-presenter-guide/

@@ -13,7 +13,7 @@ title:
 * Brian Haberman <brian@innovationslab.net>
 
 ### Very Responsible Area Director
-* Éric Vyncke <evyncke@cisco.com>
+* Eric Vyncke <evyncke@cisco.com>
 
 ### DataTracker
 * https://datatracker.ietf.org/group/dprive/documents/
