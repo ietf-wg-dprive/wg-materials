@@ -1,3 +1,4 @@
+
 ---
 title: DPRIVE IETF 108
 ---
@@ -27,9 +28,14 @@ title: DPRIVE IETF 108
 ### Current Working Group Business
 
 
+*   DNS Zone Transfer-over-TLS
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-xfr-over-tls/
+    - Authors, 20 min
+    - Chairs Action: closer to WGLC?
+
 ### New Working Group Business
 
 *   Signalling Authoritative DoT support in DS records, with key pinning  
     - https://datatracker.ietf.org/doc/draft-vandijk-dprive-ds-dot-signal-and-pin/:  
     - Peter van Dijk, 20 min
-    - Chairs Action:
+    - Chairs Action: Adopt?
