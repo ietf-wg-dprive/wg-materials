@@ -1,5 +1,5 @@
 ---
-title: DNS Privacy (DPRIVE) Interim
+title: DNS Privacy (DPRIVE) IETF108
 ---
 
  > DNS Privacy (DPRIVE)
