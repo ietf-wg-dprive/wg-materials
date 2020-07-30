@@ -39,3 +39,8 @@ title: DPRIVE IETF 108
     - https://datatracker.ietf.org/doc/draft-vandijk-dprive-ds-dot-signal-and-pin/:  
     - Peter van Dijk, 20 min
     - Chairs Action: Adopt?
+
+*   Opportunistic Encryption Use Case
+    - No draft as of yet
+    - Paul Hoffman, time permitting
+    - Chairs Action: ??

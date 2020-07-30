@@ -102,3 +102,7 @@ Blue sheets will be automatically generated via the MeetEcho roster.
 * Peter van Dijk, 20min
 * Chairs Action: Adopt?
 
+#### Opportunistic Encryption Use Case
+* Paul Hoffman, time permitting
+* Chairs Action: ??
+
