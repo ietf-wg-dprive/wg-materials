@@ -24,18 +24,23 @@
 *   Adaptive DNS: Improving Privacy of Name Resolution
     - https://datatracker.ietf.org/doc/draft-pauly-dprive-adaptive-dns-privacy/
     - Authors
-    - 20min
+    - 15 min
 
 *   Oblivious DNS Over HTTPS
     - https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/
     - Authors
-    - 20min
+    - 15 min
+
+*   DNS server privacy policy with assertion token
+    - https://tools.ietf.org/html/draft-reddy-dprive-dprive-privacy-policy-01
+    - Authors
+    - 10 min
 
 ### Current Working Group Business
 
 *   DNS Privacy Requirements for Exchanges between Recursive Resolvers and Authoritative Servers
     - https://datatracker.ietf.org/doc/draft-lmo-dprive-phase2-requirements/
     - Authors
-    - 70min
+    - 70 min
 
 

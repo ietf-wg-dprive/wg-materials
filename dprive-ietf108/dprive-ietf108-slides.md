@@ -76,6 +76,7 @@ Blue sheets will be automatically generated via the MeetEcho roster.
     - Waiting on revised I-D
     - Revisions based on discussions with responsible AD, chairs, and authors about changes made after WGLC
     - Backing out contentious changes that may not have consensus within the WG or the IESG
+    - Chairs working with shepherding AD to resolve feedback
     - Change in authors
 
 ### draft-ietf-dprive-bcp-op
@@ -101,19 +102,3 @@ Blue sheets will be automatically generated via the MeetEcho roster.
 * Peter van Dijk, 20min
 * Chairs Action: Adopt?
 
-# Reference
-
-### BlueSheets
-
-Attendee list will be harvested from MeetEcho roster
-
-### Mic Line Queue
-
-### Helpful Info & Prep
-
-The IETF has prepared a couple of documents to help get everyone ready,
-including a reminder that you need to register for IETF107 as a remote participant to join remotely.
-
-  https://www.ietf.org/how/meetings/107/session-participant-guide/
-
-  https://www.ietf.org/how/meetings/107/session-presenter-guide/
