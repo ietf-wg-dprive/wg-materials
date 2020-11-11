@@ -23,7 +23,7 @@ title: DPRIVE IETF 109
 ## Agenda
 
 ### Administrivia
-    * Agenda Bashing, Blue Sheets, etc,  10 min
+    * Agenda Updates, etc,  10 min
 
 ### Current Working Group Business
 
