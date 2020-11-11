@@ -1,5 +1,6 @@
 
 ---
+
 title: DPRIVE IETF 109
 ---
 # DNS Privacy Exchange (DPRIVE) WG
@@ -15,6 +16,7 @@ title: DPRIVE IETF 109
 
 ### Very Responsible Area Director
 * Eric Vyncke evyncke@cisco.com
+=======
 
 ### DataTracker
 * https://datatracker.ietf.org/group/dprive/documents/
@@ -23,10 +25,11 @@ title: DPRIVE IETF 109
 ## Agenda
 
 ### Administrivia
+
     * Agenda Updates, etc,  10 min
+=======
 
 ### Current Working Group Business
-
 
 *   DNS Zone Transfer-over-TLS
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-xfr-over-tls/
@@ -42,6 +45,3 @@ title: DPRIVE IETF 109
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-phase2-requirements/
     - Working Group, time remaining
     - Chairs Action: Facilitate new edits
-
-### New Working Group Business
-
