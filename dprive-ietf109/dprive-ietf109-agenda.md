@@ -27,6 +27,8 @@ title: DPRIVE IETF 109
 ### Administrivia
 
     * Agenda Updates, etc,  10 min
+    * NOTE WELL : https://www.ietf.org/about/note-well.html
+
 =======
 
 ### Current Working Group Business
