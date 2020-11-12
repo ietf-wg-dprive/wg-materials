@@ -17,6 +17,7 @@ title: DPRIVE IETF 109
 
 ### Very Responsible Area Director
 * Eric Vyncke evyncke@cisco.com
+
 =======
 
 ### DataTracker
@@ -26,8 +27,8 @@ title: DPRIVE IETF 109
 
 ### Administrivia
 
-    * Agenda Updates, etc,  10 min
-    * NOTE WELL : https://www.ietf.org/about/note-well.html
+* Agenda Updates, etc,  10 min
+* NOTE WELL : https://www.ietf.org/about/note-well.html
 
 =======
 
