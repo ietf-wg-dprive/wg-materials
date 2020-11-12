@@ -9,6 +9,7 @@ title: DPRIVE IETF 109
 * Date: Friday 20 Nov 2020
 * Time: 0900-1100 UTC
 * MeetEcho: http://www.meetecho.com/ietf109/dprive/
+* Minutes: https://codimd.ietf.org/notes-ietf-109-dprive
 
 ### Chairs
 * Tim Wicinski tjw.ietf@gmail.com
@@ -21,7 +22,6 @@ title: DPRIVE IETF 109
 ### DataTracker
 * https://datatracker.ietf.org/group/dprive/documents/
 
-#
 ## Agenda
 
 ### Administrivia
