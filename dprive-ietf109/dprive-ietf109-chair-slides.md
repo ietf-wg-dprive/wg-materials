@@ -2,8 +2,6 @@
 title: DNS Privacy (DPRIVE) IETF109
 ---
 
- > DNS Privacy (DPRIVE)
-
 # Welcome to DPRIVE
 
 ### IETF 109
@@ -11,9 +9,8 @@ title: DNS Privacy (DPRIVE) IETF109
 * Date: 20 Nov 2020
 * Time: 0900-1100 UTC
 
-###
 * Jabber:  [dprive@jabber.ietf.org](dprive@jabber.ietf.org)
-* Minutes: [https://codimd.ietf.org/notes-ietf-109-dprive#](https://codimd.ietf.org/notes-ietf-109-dprive#)
+* Minutes: [https://codimd.ietf.org/notes-ietf-109-dprive](https://codimd.ietf.org/notes-ietf-109-dprive)
 
 ### Chairs
 * Tim Wicinski [tjw.ietf@gmail.com](tjw.ietf@gmail.com)
@@ -23,7 +20,9 @@ title: DNS Privacy (DPRIVE) IETF109
 * Eric Vyncke [evyncke@cisco.com](evyncke@cisco.com)
 
 ### Datatracker
-* [Documents](https://datatracker.ietf.org/group/dprive/documents/)
+* [DPRIVE Documents](https://datatracker.ietf.org/group/dprive/documents/)
+
+\pagebreak
 
 # Note Well
 
@@ -52,45 +51,48 @@ Definitive information is in the documents listed below and other IETF BCPs. For
 * [BCP 79](https://tools.ietf.org/html/bcp79) (Patents, Participation)
 * [Privacy Policy](https://www.ietf.org/privacy-policy/)
 
+\pagebreak
+
 # Blue Sheets
 
 Blue sheets will be automatically generated via the MeetEcho roster.
 
 # Agenda
 
-## Agenda Updates
+* Agenda Updates
+* Document Updates
+  - RFC7626bis
 
-## Document Updates
+* Current Working Group Business
+  - Zone Transfer over DoT
+  - DNS over QUIC
+  - Phase 2 Requirements
 
-## Current Working Group Business
+# Agenda Updates
 
-# 
-
- > Document Updates
+Any changes, additions, deletions?
 
 # Document Updates
 
-### draft-ietf-dprive-rfc7626-bis
-    - DISCUSSing feedback from IESG review
-    - Need to engage with DISCUSS holder
+## draft-ietf-dprive-rfc7626-bis
+* DISCUSSing feedback from IESG review
+* Need to engage with DISCUSS holder
 
-# Agenda 
+# Current Working Group Business
 
-## Current Working Group Business
-
-####   DNS Zone Transfer over TLS
+##   DNS Zone Transfer over TLS
 
 * [draft-ietf-dprive-xfr-over-tls](https://datatracker.ietf.org/doc/draft-ietf-dprive-xfr-over-tls/)
 *  Authors, 15 min
 *  Chairs Action: closer to WGLC?
 
-####   DNS over QUIC
+##   DNS over QUIC
 
-* [draft-ietf-dprive-dnsoquic] (https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/)
+* [draft-ietf-dprive-dnsoquic](https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/)
 *  Authors, 15 min
 *  Chairs Action: ?
 
-####  Phase 2 (Recursive to Auth) Requirements
-* [draft-ietf-dprive-phase2-requirements] (https://datatracker.ietf.org/doc/draft-ietf-dprive-phase2-requirements/)
+##  Phase 2 (Recursive to Auth) Requirements
+* [draft-ietf-dprive-phase2-requirements](https://datatracker.ietf.org/doc/draft-ietf-dprive-phase2-requirements/)
 * Work group, 90 minutes
 
