@@ -1,0 +1,121 @@
+# DPRIVE interim-2021-dprive-01
+
+Administrivia - 10 minutes
+
+
+## Opportunistic Encryption (draft-pp-recursive-authoritative-opportunistic) - 20 minutes
+
+Ben Schwartz: Support adoption; authenication text should be removed. Current text does not make clear what identity one authenicate with. 
+
+Paul Hofmann: We could include two. 
+
+BS: Transport cache not clear what it is keyed on - ipaddr or nameserver. 
+
+PH: Draft Should specify. 
+
+Duane Wessels: Support adoption as well, TLSA think is a better mechanism. 
+
+Peter van Dijk: Support adoption. Good middle ground. TLSA has a problem with NS data is not signed. Still be leaking domain name. 
+
+PH/PvD: 853 is a bit overloaded. Allocate a separate port for Auth DoT. 
+
+PH: DoQ would be a better solution within five years. 
+
+PvD:  Seperate document for another port
+
+BS: should use 853. DNS transport layer. TLSA may end up playing a role in authenication. 
+
+
+
+## Opportunistic encryption from resolvers perspective - 40 minutes
+
+BS: Opportunistic encryption is valuabale, especially for shaking out resource issues.
+
+PvD: What Ben says. 
+
+Opportunistic encryption from authoritative perspective - 40 minutes
+
+PvD: agreements on Cloudflare/FB sending ECS because of using TLS. 
+
+Ralf Weber: does not like probing, but with opportunistic is the only way. I really would like the authenticted recursive way also go forward.
+
+PvD: Document should not document authenication at all. 
+
+PvD: Wonder if Duane or TLS operators would comment on opening up for DoT.
+
+Duane: cannot comment
+
+Jim Reid: TLD operators run servers run by different partners, so supporting TLS could be tricky. 
+
+Scott Hollenbeck: Verisign has no plans to support at this times. Concerns about unknown resource consumption and performance considerations. 
+
+Paul Hofmann: TLD w/Multiple providers and transport cache. Turn on TLS on secondary servers to watch performance. 
+
+Allison Mankin:  Asked what the privacy assurance intended to the users is, if it will be common for some servers in footprint to not have TLS enabled?  For soft rollout - can use NS not in the NS RRSet and test against. Is it in scope for the document to advise privacy-centric recursive operators to maintain state of which authoritative addresses serve DoT? 
+
+JR: TTL of A records of NS Records are very short. 
+
+Alex Mayhofer: if key is ip address, considerations documnted for anycast.
+
+PH: No on privacy guarantee (Allisons Q1). Gives Privacy oriented resolvers a non documentable way of doing things (Q3). Does not want this document to describe what to key on. 
+
+BS: on topic for turning for one nameserver - one NS record or one IP address. Issue with transport caches. More extreme for anycast rollouts. 
+
+Stephen Farrell: TLS found reporting to be useful initially. 
+
+PvD: Draft too perscriptive. Should describe concerns w/out saying what to do.
+
+JR: 
+
+## Going Forward
+
+CfA on Opportunistic Encryption, could WG adopt even with discussion from today
+
+BS: Need some interopt testing. 
+
+PH: used to run interopt events. watching but not participating. 
+
+AM: Really like Interopt events. NDSS on 2/21/2021 https://www.ndss-symposium.org/ndss2021/
+
+
+Notes at:
+https://codimd.ietf.org/notes-ietf-interim-2021-dprive-01-dprive?edit
+
+## Wrap-up - 10 minutes
+
+
+# BlueSheets
+1. Tim Wicinski
+2. Michael Richardson, Sandelman
+3. Stephen Farrell, Trinity College Dublin
+4. Peter van Dijk, PowerDNS
+5. Zaid AlBanna, Verisign 
+6. Vladimir Cunat, cz.nic, vladimir.cunat@nic.cz
+7. Andrew Campling, 419 Consulting
+8. Stéphane Bortzmeyer, AFNIC
+9. Scott Hollenbeck, Verisign, shollenbeck@verisign.com
+10. Burt Kaliski, Verisign, bkaliski@verisign.com
+11. Yoshiro Yoneya, JPRS
+12. Andrew S, NCSC
+13. Éric Vyncke, Cisco
+14. Ben Schwartz, Google
+15. Barry Leiba, Futurewei
+16. Mike Bishop, Akamai
+17. John Border, Hughes
+18. Kazunori Fujiwara, JPRS
+19. Vittorio Bertola, Open-Xchange
+20. chi-jiun su, Hughes Network Systems
+21. jim reid, rtfm llp
+22. Russ Housley, Vigil Security
+23. Tommy Jensen, Microsoft
+24. Shivan Sahib, Salesforce
+25. Duane Wessels, Verisign
+26. Paul Hoffman, ICANN
+27. Sean Turner, sn3rd
+28. Allison Mankin, Salesforce
+29. Alex Mayrhofer, nic.at
+30. Ralf Weber, Akamai
+31. Peter Koch, DENIC eG
+32. tale, Salesforce
+33. Sara Dickinson, Sinodun
+34. Brian Haberman, JHU
