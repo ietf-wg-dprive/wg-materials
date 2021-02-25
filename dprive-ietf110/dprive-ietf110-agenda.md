@@ -50,9 +50,7 @@ title: DPRIVE IETF 110
     - Authors, 20 minutes
     - Chairs Action: Call for adoption
 
-
 *  Signaling Authoritative DNS Encryption 
     - https://ekr.github.io/draft-rescorla-dprive-adox/draft-rescorla-dprive-adox.txt 
-    - ekr@rtfm.com
     - Authors, 15min
     - Chairs Action:
