@@ -38,11 +38,6 @@ title: DPRIVE IETF 110
     - Authors, 20 minutes
     - Chairs Action: ?
 
-*   Recursive to Authoritative DNS with Encryption
-    - https://datatracker.ietf.org/doc/draft-ietf-dprive-opportunistic-adotq/
-    - Authors, 45 minutes
-    - Chairs Action: Facilitate new edits
-
 ### Related Business
 
 *   Oblivious DNS Over HTTPS
@@ -50,6 +45,13 @@ title: DPRIVE IETF 110
     - Authors, 20 minutes
     - Chairs Action: Call for adoption
 
+### DNS Authoritative Encryption Discussion
+
+*   Recursive to Authoritative DNS with Encryption
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-opportunistic-adotq/
+    - Authors, 45 minutes
+    - Chairs Action: Facilitate new edits
+    - 
 *  Signaling Authoritative DNS Encryption 
     - https://ekr.github.io/draft-rescorla-dprive-adox/draft-rescorla-dprive-adox.txt 
     - Authors, 15min
