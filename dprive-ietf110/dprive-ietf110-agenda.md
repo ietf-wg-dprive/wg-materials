@@ -53,6 +53,6 @@ title: DPRIVE IETF 110
     - Chairs Action: Facilitate new edits
     - 
 *  Signaling Authoritative DNS Encryption 
-    - https://ekr.github.io/draft-rescorla-dprive-adox/draft-rescorla-dprive-adox.txt 
+    - https://datatracker.ietf.org/doc/draft-rescorla-dprive-adox-latest/ 
     - Authors, 15min
     - Chairs Action:
