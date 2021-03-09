@@ -1,0 +1,170 @@
+
+# DNS Privacy Exchange (DPRIVE) WG
+## IETF110
+
+* Date: Tuesday 09 Mar 2021
+* Time: 1200-1400 UTC
+* MeetEcho: http://www.meetecho.com/ietf110/dprive/
+* Minutes: https://codimd.ietf.org/notes-ietf-110-dprive
+
+### Chairs
+* Tim Wicinski tjw.ietf@gmail.com
+* Brian Haberman brian@innovationslab.net
+
+### Responsible Area Director
+* Éric Vyncke evyncke@cisco.com
+
+=======
+
+### DataTracker
+* https://datatracker.ietf.org/group/dprive/documents/
+
+## Agenda
+
+### Administrivia
+
+* Agenda Updates, etc,  10 min
+* NOTE WELL : https://www.ietf.org/about/note-well.html
+
+=======
+
+### Current Working Group Business
+
+*   DNS over QUIC
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/
+    - Authors, 20 minutes
+    - Chairs Action: ?
+
+    * Sara Dickinson: 
+        * 4y since first proposed DoQ. How time flies
+        * Still some uncertainty on draft direction. orig draft only stub-to-recursive. is the proto needed? performance Qs &c.
+        * (Sara reviews history of draft revs)
+        * slide 5: review of implementations (if you want to see how many there are, types of contexts/OS)
+        * claims from Adguard works better in mobile
+        * DoQ looks analogous to DoT in discovery (an open question)
+        * stream model needs mods to support XFR. slides 9-10 discuss the choices the WG has to make
+        * summary, 3 Qs to WG. 1. head to spec 2. does it encompass recursive to auth.  3. if it does rec-to-auth how to handle XFR
+    * Questions/Comments
+        * Jan Včelák: nice if covered everything we need now. not sure, if covered every future case, think we need XFR now. mentioned problem is multiple messages, if server used DoQ, if it **needs** to send multiple answers: the limitation came from TCP, for QUIC we have different signalling, can use stream encoded, can send much larger responses for XFR so can maybe make it work with the simpler approach. OTOH thinking use cases like proxies. If change this, then proxies wouldn't work. 
+            * Sara: good point(s) included the 65k limit, same as DoH the principle of larger packet sizes came up, same issue with proxying and compat with other transports. updated in 01 version to packetsize, can revisit but we'd be rehashing the same argument from DoH. solves problems to keep the limit.
+            * Jan then go with the 2byte prefix. Sara proxying is another reason the solution proposed is good fit
+         * Ben Schwartz: Vote for port 853 UDP. DNS over DTLS draft is experimental, minimally deployed, QUIC and DTLS are fully de-muxable, designed to share ports, think we should aim to have final port num when we have a standard be 853
+             * Sara: was a conversation offlist, others can speak to port alloc better. Concern is that its a process barrier: it will slow it down. dedicated port for QUIC, doesnt make a huge amount of deployment difference (eg blocking) -was considered, want to hear other people.
+             * **Brian** Take to the ML
+         * Jim Reid: uncomfortable with bytecount prepend. smells like a layer violation. Advance a document, draw a ring around XFR, TBD, deal with it later. get on with the core job, basic protocol spec, deal with most common query/response deal with later
+             * Sara: proxies, translation, do have to "special-case" for XFR, feels like a bit of a <mumble/> but if have to redefine later, different ALPN, want to fully assess if we can support in the current protocol. 2byte len is just framing answers within the stream otherwise a simple bytestream. really just additional compatibility. Have to have these discussions, which direction to take.
+         * Watson Ladd: didn't understand adv and disadv. to doing this over 853. 
+             * Sara: little bit of discussion last IETF. for recursive-to-auth, packaging whole HTTP layer around DNS queries. most recursive, auth, see that as uneccessary overhead on that path. Want the cleaner, lighter, pure QUIC mapping in this draft. If others remember differntly please say so.
+         * David Schinazi: (ex Tech lead for QUIC in Chrome) not all UDP ports are equal getting over the internet. using 443, with ALPN demux, share service, would just work. Get the point about fighting an uphill battle with purists but may be the best deployment strategy
+             * Sara: take onboard.
+
+### Related Business
+
+*   Oblivious DNS Over HTTPS
+    - https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/
+    - Authors, 20 minutes
+    - Chairs Action: Call for adoption
+
+    * Christopher Wood
+        * Post Singapore IETF much work. 
+        * Discussion of goals of the proto, risk in collusive behaviour between the parties (can't be constrained formally AIUI)
+        * slides 4-8: demo of the protocol entities, "how things work"
+        * other ways to get to the outcome (eg using SOCKS) -ODOH aims to be "unlinkable" between discrete queries, noting it does a bunch more than the more general problem and allows the proxy NOT to become a general proxy (with all the risks)
+        * deployment questions, (slide 10) things which really need to be talked out on the ML probably. The collusion risk is explicitly marked out-of-scope.
+        * in use, in production. on cloudflare edge. "it's being dogfooded" -formal analysis being done (Tamarin)
+        * "given interest in this protocol, investment, deployment: Is there interest in Adoption Experimental V1"
+    * Questions/Comments
+        * Paul Hoffman: reasonable experiment, but not WG work. take to independent submissions "not crazy, proof reasonable security concept" hesitant to take to this WG, Don't know how many users will understand the advantage "dont trust my immediate upstream to not collude" -especially when the best performance is they are the same organisation. Don't bring it in the WG, get published, let people bang on it
+            * Chris: tricky to explain the privacy benefits. 
+        * Eric Orth: don't see the issue with explaining. Temp thing before new stuff, oblivious HTTPS, doesn't seem like full fledged, adopted
+            * Chris: definitely not STDS track! but, use-case right now, want to continue experiment.
+        * Tommy Pauly: echo Experimental appropriate. if WG doesn't want it, go direct to independent, or sponsored experimental, prefer to see it adopted as a quick processing thing for this WG to have the opportunity to reviews, give input on text. How to think about this area in general (future protocols) as implementor, planning having support for this, from Apple's side, reach a lot of users. provide benefit without deep understanding. Ask Chair, some kind of poll, best way to go forward.
+            * Brian: can poll now, or repeat on the ML. Prefer to take Action-item poll adoption on ML, elaborate on 3 primary options assuming Exp: adopt, independent, or AD sponsored. (3rd requires chat with AD)
+            * Tim: lets use the show-of-hands tool
+            * Chris: comment in chat: discovery. Agree its open problem, hence out-of-scope. future spec can solve
+            * Tim: can adopt, noodle, not proceed. Some people feel thats burning WG time. But, I think its useful
+      
+        * Watson Ladd: Stuck in RFC-ED. like whats on the slide, ODOH as experimental, bunch of +1s in the chat to Experimental
+        * Ben Schwartz: said earlier support adopt, but heard change in context of discussion with authors noting deployment. this may not be a great fit for adopt, adoption means change control. need to think its right and reasonable to take a step back, what is really the right long-term solution here. how does this work in a world with DoQ, router architecture. Most interested in WG taking it on to design V2. let this version go out as-is from Authors
+            * Chris: these are things we have to sort through, why I think experimental adoption in WG is the right thing. dont think we need to focus on V2, point of the exercise is to make sure we work out all the kinks in v1 in the experiment so in V2, easier time to get out the door
+        * Ben: too late for non-breaking compat changes. get RFC number, move ahead, don't mess with it
+            * Chris: open to handing over change control if thats whats needed. not seeking RFC num. want right way to shape the protocol. don't see an issue in that respect
+            * Brian: do you want a doc which reflects current deployment or one which changes?
+                * Chris: we expect the doc to change. by no means rigid with respect to whats in the doc, proto, crypto. 
+        * Ted Hardie: Cache semantics, what the experiment tells you. great deal of interest from proponents, relationship to rest of DNS, support experimental, but cautious to draw conclusions to broader use of HTTP. way caches work, HTTP vs DNS not always the same. concern that presume design for more limited MIME types, DNS cache mechanisms, harbinger of good result in HTTP. support going forward but be cautious what the results mean. Oblivious DOH will be divergent from Oblivious HTTP because of cache differences between two different arenas
+            * Chris: there are subtle differences. can't lift ODOH results to DOH. hope is that we can use ODOH, divergence, delta very minimal not due to security, crypto changes, more the underlying technology
+        * Tommy Pauly: scope difference is why interesting to pursue ODOH on its own now, that scope is more tractable in short-term. Change control, If adopted WG hs complete change control over proto. the doc is already designed to be versioned, has draft aligned version num, experience in QUIC. keep it up to date, aligned to WG. not a blocker
+        * David Schinazi: job last year making google quic IETF quic. if we'd said "cant do <x/> its already deployed" we wouldn't have QUIC. we should do the exact same thing (process?) here. not a problem, its how we do it in this SDO. fully support doing it here, not a pushback reason, tis why its here.
+        * Eric Orth: DNS is a specific case, Web used to "good samaritan" servers, could find an ecosystem for ODOH emerges. 5 years down the line, nobody wants to run OHTTP at scale but run ODOH fine, still trying to make the ecosystem work for OHTTP.
+
+    * Brian: Poll showed 23 interested in adopt, 13 not interested. Action-item: solicit ML Adoption as noted above.
+    
+### DNS Authoritative Encryption Discussion
+
+* Scott Hollenbeck asks for comments to Requirements draft status
+    * Brian: not getting enough feedback from WG. encourage people to bring topics to ML, to have discussion. Can't decide which of the two relevant drafts fix the problem (this is coments to DNS Auth Enc discussion)
+    * Benno: "well. yes.. and no." more than happy to work with the WG on the requirements doc, incorperate discussion from IETF109 and ML. Would like to hear from WG how useful the document is. Happy to do the work, demonstrated need. Step back one: 
+        * "is this a useful doc, know the chairs, some individuals like, think its useful but, what does the WG at large think?"
+
+    * **Action Item** - come up with set of recommendations for the authors
+
+    * Paul Hoffman: we have two problems. Current requirements doc trying to "shoehorn" two things into one doc but clear from ML, some people care about one bit, some about another. Fine.. if the requirements doc can cover this, one or multiple solutions docs, can point to use-case doc.
+    * Peter van Dijk: like having this document but 'requirements' is such a strong word.
+    * Brian: other ways to think about this, but important discussion point for ML
+ 
+*   Recursive to Authoritative DNS with Encryption
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-opportunistic-adotq/
+    - Authors, 45 minutes
+    - Chairs Action: Facilitate new edits
+    -
+    
+    * Peter van Dijk
+        * working with paulH on the problem, adopted work
+        * solves the DNS discovery problem, has comparisons of approaches, using TLSA or SVCB. has overview of the distinctions
+
+*  Signaling Authoritative DNS Encryption 
+    - https://datatracker.ietf.org/doc/draft-rescorla-dprive-adox-latest/ 
+    - Authors, 15min
+    - Chairs Action:
+
+    * Eric Rescorla
+        * Talk about what we're trying to accomplish, what can, and cannot be done
+        * (slide on threat models)
+        * what needs to be encrypted? -both sides of traffic to parent and child, to prevent information leakage
+        * discusses SVCB
+        * Ben Schwartz: NS name insecure, even if DNSSEC sign, with SVCB could be an attacker, not received over a private channel
+        * Paul Wouters: not about not wanting to serve SVCB. no mechanism yet, hard to get new records into the system eg trouble with CDNS CDS. its not "don't like it" the reality of operation of the DNS, registry system makes this hard. Can do SVCB at the child, for in-baliwick have no chance of privacy.
+        * Jonathan Reed: don't like "can never do anything new in the parent" will lead to hacks we never intended. registry ecosystem so frozen, we can't do this, lets say this in DNSOP. everything new in the parent has to work in the child but "we can never change the parent" we have to get past this. interim methods until we get what we want in the parent. This is a non-starter
+        * Jim Reid: provisioning in the parent, one problem. zone cut semantics issues, DNSSEC deployment, implementation concerns, for people writing resolvers.
+        * "Its TLS all the way down"
+        * three contentious issues DANE vs WebPKI DoT vs DoH why not both? SVCB is flexible.
+
+    * Brian: we have 25 min for discussion over both drafts, what the WG wants to do, how to move forward.
+        * Kirsty Paine: to clarify.. "how security works" slide. some "if" qualified statements. the properties are different, can't bundle them together. Another slide, discussing the thread model including some attack models and not others. Q: how do you make the value judgement and what is the thread model if not here, and what do you lose by not considering it here.
+            * Eric: to take the second Q first. Its a weaker attacker issue, concrete example argue need recur-parent and recur-child. So, depending where attacker is, on which path, then.. alters what you need to do. Absolutely right, DNSSEC/TLS apply different values here. This is part of the confusion of "what are you trying to achieve" -not attempting to provide integrity for any records except the ones needed to get TLS. So, ignore all the other stuff, but for authenticating the NS and SVCB, roughly equivalent
+        * Ben Schwartz: to the first draft of the two, what we had, before, was a way for auth servers to get some traffic, without guaranteeing uptime. the current draft makes the choice auth or non-auth choice of the requestor. no safe way to deploy a new protocol before given its full SLA. Point 2: requirements drafting is hard. do we need to figure out to require, or not require changes to EPP spec and ICANN registry agreements? Puzzle. Point 3: there is a path forward here blending ideas. Roughly, looks like use DS-hack, to encode just the flag that the child "plays the new game" then go ask the child for SVCB rec to find what to do, costs latency but only for the zones which opt in. Then eventually we get out of the latency by putting SVCB recs in the parent, and having the parents also do TLS or zoneMD digest. (root) only works for out-of-baliwick NS. can start getting protected now/soon, but can remove performance cost to make it more attractive.
+            * Paul H: Ben, thank you, yes. incremental is important. On the general point adding recs to additional in parent. think thats going to be a real issue. on the "opportunistic" side don't care how it comes out, DS or whatever to be clear, adding anything to the additional takes contracts and updated s/w and auth s/w won't add willy-nilly to the additional. Said in chat, if the way we WANT then go there, don't be "oh its impossible" this is important encryption don't give up now. Since we do have 1 WG doc now, slammed one idea of fully auth in. EKR has a more full explanation including use-case, happy to split it out again. Up to chairs, Recommendation is, work on these two in parallel, not jam into one document. However the WG wants to go is fine.
+        * Daniel Gillmor: Want to follow up on Ben, Paul "how to get to deployment phase" if signalling is a hard fail thats a problem. If its not a boolean, (and dont think it should be) then need to think what the intermediate state is. report-only state, requires reporting format, mechanism, to learn when failures. See this in other situations. Glossed over that in these, significant amount of engineering work. 
+        * Puneet Sood: from google pDNS, agree with DKG. need transitional support, partial, opportunistic 
+        * Robert Evans: Google, tech lead cloud DNS, so for the auth server interest. EKRs proposal interesting, focussed on the authenticated case, number of paths to security, incremental adoption of SVCB provides a road to security. If the elements, the TLS cert checks out, and the NS set is validatable, and a secure signal in SVCB you have a secure path. Could begin with DoH or DO53 query for SVCB. over time, paths, DS record with format or parent SVCB, adopted, then increases security. Can have fully secure from integrity PoV SVCB today, without parents as long as there are DNSSEC sigs for the SVCB and (missed)
+        * Jim Reid: concerned we've moved to solutions, prematurely, Not sure risk/threat analysis has been done. we're jumping ahead.
+   * Brian: think this goes to ML discussion:
+       * Jim some stuff in other drafts not well aligned to things discussed today
+       * Paul H: reporting mechanism, Auth server, https://datatracker.ietf.org/doc/draft-arends-dns-error-reporting/ discussed in DNSOP, will be of interest, for general reporting recursive to auth. could be used here as well. not concerned about absence of reporting mechanism dont think we need our own, generalised mechanism can be assumed
+       * Christopher Wood: Jim, nail down threat model, auth server, figure out what it is, what are viable solutions within that threat model
+       * EKR: agree threat model important. try to lay out in our document. Lets try to get to agreement. Don't know what else needs to be don in the threat model. somebody else can weigh in
+       * Brian: want the ML to agree to the model laid out, or say what they want to change.
+       * Ben: agree with threat model on EKRs first slide. Aspiration is "solve the whole thing" going to produce some solutions which solve only part of it, weaker threat models EKR mentioned maybe
+   
+   * Tim: 
+       * recomm for authors on requirements doc (Scott)
+       * more interest in OHTTP work. adopt or not (call to ML)
+       * work with peter/paul new edits for Opportunistic draft
+           * Paul H: Q for next-step where do requirements get specified? could be unauth draft talking reqts, and fully auth draft talk about theirs, or they go into a single doc, worst-case is 3 docs talking about it. Chairs to figure out. Speaking for Peter happy to throw ours out to the doc, but it hasn't been worked on. Better to have them in the fully auth doc.
+               * Tim: Brian and I were not sure it would ever get published, WG doc status, have to take this back. need WG feedback.
+   * Brian: adopt EKRs document?
+       * Eric: fine with that but also fine with it not being done right away. Want to move how we're moving forward, not want 9 years workshopping requirements, want to get to solutions. If people think the Reqts laid out roughly suitable, solition roughly suitable, then move forward with that
+           * Tim:agree nobody wants to workshop requirements forever.
+
+   * Brian: AOB? three.. two.. one..
+       * Tim and I will go back,  how to drive requirements, other Action-items kicked off. 
