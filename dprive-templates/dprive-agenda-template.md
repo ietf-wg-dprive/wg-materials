@@ -1,9 +1,6 @@
 
----
-title:
----
 # DNS Privacy Exchange (DPRIVE) WG
-### IETF ##, XXXX
+### IETF XXX, XXXX
 
 * Date: 
 * Time: 
@@ -23,7 +20,9 @@ title:
 ## Agenda
 
 ### Administrivia
-    * Agenda Bashing, Blue Sheets, etc,  10 min
+
+* Agenda Updates, etc,  10 min
+* NOTE WELL : https://www.ietf.org/about/note-well.html
 
 ### Current Working Group Business
 
