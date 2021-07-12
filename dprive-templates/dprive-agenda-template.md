@@ -1,10 +1,14 @@
 
 # DNS Privacy Exchange (DPRIVE) WG
-### IETF XXX, XXXX
+### IETF %%MTG%%, XXXX
 
 * Date: 
 * Time: 
-* Room: 
+* MeetEcho: https://meetings.conf.meetecho.com/ietf%%MTG%%/?group=dprive&short=&item=1
+* Minutes: https://codimd.ietf.org/notes-ietf-%%MTG%%-dprive
+
+* Jabber: dprive@jabber.ietf.org
+
 
 ### Chairs
 * Tim Wicinski <tjw.ietf@gmail.com>

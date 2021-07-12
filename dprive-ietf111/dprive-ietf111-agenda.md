@@ -4,10 +4,10 @@
 
 * Date: 29 July 2021
 * Time: 1200-1300/1330-1430 PDT (1900-2000/2030-2130 UTC)
-* Room: [https://meetings.conf.meetecho.com/ietf111/?group=dprive&short=&item=1](https://meetings.conf.meetecho.com/ietf111/?group=dprive&short=&item=1)
+* MeetEcho: https://meetings.conf.meetecho.com/ietf111/?group=dprive&short=&item=1
+* Minutes: https://codimd.ietf.org/notes-ietf-111-dprive
 
-* Jabber:  [dprive@jabber.ietf.org](dprive@jabber.ietf.org)
-* EtherPad: [https://codimd.ietf.org/notes-ietf-111-dprive](https://codimd.ietf.org/notes-ietf-111-dprive)
+* Jabber:  dprive@jabber.ietf.org
 
 
 ### DataTracker
@@ -19,7 +19,6 @@
 
 ### Very Responsible Area Director
 * Eric Vyncke <evyncke@cisco.com>
-https://codimd.ietf.org/notes-ietf-111-dprive
 
 
 #
