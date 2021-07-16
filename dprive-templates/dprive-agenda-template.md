@@ -9,6 +9,7 @@
 
 * Jabber: dprive@jabber.ietf.org
 
+* [Datatracker](https://datatracker.ietf.org/wg/dprive/documents/)
 
 ### Chairs
 * Tim Wicinski <tjw.ietf@gmail.com>
@@ -16,9 +17,6 @@
 
 ### Very Responsible Area Director
 * Eric Vyncke <evyncke@cisco.com>
-
-### DataTracker
-* https://datatracker.ietf.org/group/dprive/documents/
 
 #
 ## Agenda

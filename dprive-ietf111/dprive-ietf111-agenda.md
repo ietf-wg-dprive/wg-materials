@@ -1,6 +1,6 @@
 
 # DNS Privacy Exchange (DPRIVE) WG
-### IETF111
+## IETF111
 
 * Date: 29 July 2021
 * Time: 1200-1300/1330-1430 PDT (1900-2000/2030-2130 UTC)
@@ -21,7 +21,6 @@
 * Eric Vyncke <evyncke@cisco.com>
 
 
-#
 ## Agenda
 
 ### Administrivia
@@ -38,13 +37,12 @@
     - Time Requested:  20m
     - Chairs Action:
 
-
-
 *   Recursive to Authoritative DNS with Unauthenticated Encryption  
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-unauth-to-authoritative/ 
     - Requester Email: Hoffman
     - Time Requested:  30m
     - Chairs Action:
+
 
 
 ### New Working Group Business

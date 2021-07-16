@@ -1,4 +1,6 @@
 #!/bin/sh
+# simple script to do the doc preperation for an upcoming ietf meeting
+# this fails for interims
 
 WG=dprive
 ECHO=
