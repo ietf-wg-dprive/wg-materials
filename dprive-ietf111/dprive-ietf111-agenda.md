@@ -30,7 +30,6 @@
 
 ### Current Working Group Business
 
-
 *   Specification of DNS over Dedicated QUIC Connections
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/  
     - Requester Email: Dickinson
