@@ -32,16 +32,26 @@
 
 *   Specification of DNS over Dedicated QUIC Connections
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/  
-    - Requester Email: Dickinson
+    - Requester: Dickinson
     - Time Requested:  20m
     - Chairs Action:
 
 *   Recursive to Authoritative DNS with Unauthenticated Encryption  
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-unauth-to-authoritative/ 
-    - Requester Email: Hoffman
+    - Requester: Hoffman
     - Time Requested:  30m
     - Chairs Action:
 
-
-
 ### New Working Group Business
+
+*   New record types in the parent zone
+    - Requester: Wouters
+    - Time Requested: 30m
+    - Chairs Action: Facilitate WG consensus
+
+*   Signaling Authoritative DNS Encryption
+    - https://datatracker.ietf.org/doc/draft-rescorla-dprive-adox-latest/
+    - Requester: Rescorla
+    - Time Requested: 20m
+    - Chairs Action:
+
