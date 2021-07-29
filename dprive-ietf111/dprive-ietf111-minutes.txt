@@ -1,0 +1,212 @@
+
+# DNS Privacy Exchange (DPRIVE) WG
+## IETF111
+
+* Date: 29 July 2021
+* Time: 1200-1300/1330-1430 PDT (1900-2000/2030-2130 UTC)
+* MeetEcho: https://meetings.conf.meetecho.com/ietf111/?group=dprive&short=&item=1
+* Minutes: https://codimd.ietf.org/notes-ietf-111-dprive
+
+* Jabber:  dprive@jabber.ietf.org
+
+
+### DataTracker
+* https://datatracker.ietf.org/group/dprive/documents/
+
+### Chairs
+* Tim Wicinski <tjw.ietf@gmail.com>
+* Brian Haberman <brian@innovationslab.net>
+
+### Responsible Area Director
+* Eric Vyncke <evyncke@cisco.com>
+
+
+## Agenda
+
+### Administrivia
+
+* Agenda Updates, etc,  10 min
+* NOTE WELL : https://www.ietf.org/about/note-well.html
+
+Minutes: Shane Kerr (apologies for inaccuracies)
+Minutes: Ginny Spicer
+
+Alexander Mayrhofer mentions that the revised requirement draft will be dropped.
+
+Chairs: Do presentations in reverse order.
+
+### Current Working Group Business
+
+*   [Specification of DNS over Dedicated QUIC Connections](https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/)  
+    - Requester: Dickinson
+    - Time Requested:  20m
+    - Chairs Action: Ping working group to ask for review of the state of the document.
+
+Martin Thomson (MT): Is a single ALPN used?
+Sara Dickinson (SD): Yes.
+
+Alex Mayrhofer (AM): Like change to general purpose protocol. Server-initiated transaction out of scope; might need a clarification that DNS NOTIFY is not a server-initiated transaction. Was a source of confusion.
+SD: We can add text for that.
+
+Brian Haberman (BH): What do you think the status of the doc is?
+SD: We're pretty with how the doc. looks, and have some other feedback. We want an initial round of review, and if mostly minor would be look to move to WGLC at that time.
+
+Shane Kerr (SK): XoQ transfers in this draft. It seems different enough to potentially merit its own draft.
+SD: 50/50. Is there anything that would be ambiguous to an implementer that would cause problems? This will take more looking at.
+
+Paul Hoffman (PH): Making the XFR part of the draft into its own document may do more harm than good.
+
+
+*   [Recursive to Authoritative DNS with Unauthenticated Encryption](https://datatracker.ietf.org/doc/draft-ietf-dprive-unauth-to-authoritative/) 
+    - Requester: Hoffman
+    - Time Requested:  30m
+    - Chairs Action: Kick off a discussion to try and resolve these points.
+
+SD: Would be nice to generalize this to all encrypted transport, with the level of interest in DoQ.
+PH: Agree.
+
+Brian Dickson (BD): Will find more cycles on this and related things for parental side.
+PH: Have removed all discussion of parental side in -03 document. Had mentioned it in -02 side, but because of questions that will come up later in the meeting we removed it.
+
+Geoff Huston (GH): Put in a request to say this document should be completed without waiting on the full work (authentication). Ship it. Now.
+
+Paul Wouters (PW): I will say the exact reverse. Authentication is relatively straightforward these days. Should be able to figure out what to use. Skip this part, so you don't have to worry about being opportunistic or failing completely.
+PH: It's clear that you're wrong about "it will be easy to do". Look at the mailing list for the past 6 months.
+
+Watson Ladd (WL): I'm a little confused because of lack of knowledge of DNS. Signal is entirely dependent on resolving name server's name. What is unauthenticated here? We're not using web PKI? Or...
+PH: I think that question is for the next group of people, not this one. We're saying, "go through TLS, if the authentication fails, keep going". Does that make sense?
+WL: Why _not_ require X.509 authentication? You've got an identity for the record that you expect to connect to? Web PKI, or GAIN (?)... you have a DNS name which both of these are based on.
+PH: It would be hard to answer the question without repeating things that have been said on the list. Two use cases: 1) never want to fail, but do want encryption, OR 2) you really want really good privacy.
+
+Benjamin Schwartz (BS): Draft changed since last looked at it. Think we should have a draft for opportunistic, but now I don't think so. I think the design for authenticated is incompatible with this draft. ADoX implementation will fail connecting to this draft.
+PH: That is on the assumption that we are using web PKI instead of DANE?
+BS: No.
+PH: We would have to change the use case. Might be a 3rd use case or an unauthenticated use case.
+
+Puneet Sood (PS): Google Public DNS is reviewing what we can do in terms of opportunistic name servers. For high-volume connections, being able to do some amount of unauthenticated encryption prevents passive snooping on queries. Looking for servers to test this out. Doing test with other providers, including Facebook.
+
+Eric Rescorla (Ekr): (speaking at 2.5 ekr...) You can stand up an authoritative with no valid credentials, but no way to prevent a man-in-the-middle attack. What ADoX says, is once you get authenticated then you can use that. At least one other point, where we don't describe how authentication is discovered, but if you don't have authentication then you... fall back? If signal is via SVCB then the semantics have to be the same (between both drafts).
+PH: You said that a resolver goes to an authoritative server, get through TLS, and try to authenticate and it fails. And you said, "and maybe they start over". That was a "maybe". What would you say is the correct thing? We're saying, move forward anyway. Are you saying, "be like TLS and stop"?
+ekr: There are a couple of options. How do you discover this case? It's not clear to me why it makes sense to have an SVCB that says "do TLS" but we have an invalid cert. That would be forward compatible with SVCB in the parent. À la SSH, TOFU into something compatible, would still allow you to have some probing case. (accelerating to 4 ekr...) I'm not saying this is great but ...
+PH: Almost think that for the unauthenticated use case, don't look for SVCB, just probe.
+erk: Would allow bootstrap up.
+
+Robert Evans (RE): Start in a system where parents cannot convey the authentication signal securely. 
+PH: Sounds good thanks.
+
+Viktor Dukhovni (VD): Back in [RFC 7435](https://datatracker.ietf.org/doc/html/rfc7435) opportunistic with downgrade resistance. In SMTP specs for opportunistic DANE, if parameters are unsupported but TLS record found, use TLS but unauthenticated. Can repeat here... deliberately unusuable parameters (selector 3 for example, which is undefined). Can't use TLSA for authentication, but use TLS.
+PH: 10's of millions of servers doing DANE via SMTP, so this is not a new experiment. Widely used today (2.6 million).
+
+BD: Weak signal that should be trusted is, "is the name of the name server in a signed zone?". If it is, then expect or look for a TLSA record. If not, do opportunistic. If so, use TLS and hard fail if it doesn't work.
+PH: I think that' s quite a strong signal, and a good idea. 
+BD: If there is a need for TLS, the TLSA supports a requirement for web PKI. Scalable and validatable.
+PH: Please write that up and send it to the list.
+BD: Sure.
+
+Daniel Gillmor (dkg): We've been around this merry-go-round before, not just in DNS, but also in things like SMTP. We have to think about two cases. Respective of the recursive resolver, and the deployer of the authoritative name servers. Deploy at risk of getting zone locked out if you screw up? Always a risk of screwing up, for a range of reasons. With SMTP (with the MTA-STS mechanism), we said, "an operator wants to be able to ask for reports on failure, not automatically take the zone out". That's the kind of thing we need for deployment and for authoritative operators to take this up. Also have to consider the in-bailiwick question. At some point there's a loop, unless _somebody_ has an in-bailiwick server. So we need to be thinking about that for the signaling part as well.
+
+Christian Huitema (CH): I am look at this from an implementor PoV, I'm going to use a stack, and those stacks require in practice that I use a server name, and that the server name matches the certificate. I'd like to be clear about what server name do I use, and how do I find it?
+PH: We have talked about this but can make it clearer in the draft. If using a stack that will fail when authentication does, then that's your choice.
+CH: 
+
+BH: Action will be taken and we will consider new use cases and additions to current use case.
+
+### New Working Group Business
+
+*   [Signaling Authoritative DNS Encryption](https://datatracker.ietf.org/doc/draft-rescorla-dprive-adox-latest/)
+    - Requester: Rescorla
+    - Time Requested: 20m
+    - Chairs Action:
+
+PH: What is the problem?
+EKR: problem to be solved is signalling authentication. Want to go to example.com, .com tells me stuff that says example will be encrypted
+
+Paul Wouters (PW): Clarification: Do you think if SCVB in the parent wouldn't work is the rest still useful?
+EKR: I don't think matter of simply in-bailwick, but also protecting it. Absent DNSSEC parent doesn't say encrypt get forced down, Even out of baliwick no privacy. Universal DNSSEC yes, otherwise need parent.
+
+PW: I think you're wrong, if I have resolved ns1.dreamhost.com for one thing, and then resolve another child of it I can still connect securely?
+
+EKR: How?
+PW: assume already fetched ns1.dreamhost.com earlier. Leaked when looking for dreamhost.com, who cares.
+EKR: if client cold won't happpen. Less value than parental
+
+BD: The in-bailwick case, where zone is being served in the zone itself, that will never have privacy modulo some serious upgrades that will take decades. If we ignore that case, then the real issue is that when you're looking in .com for a name server for example.com, and it gives you a name server in ns1.example.net, how do you validate the glue data for ns1.example.net? Currently that is not possible. These are not signed. Will be tackled once solved making query to ns1.example.net for something DNSSEC-signed whether TLSA or else to query ns1.example.net for example.com is the piece with TLS, solvable without parent
+EKR: I think this is what Paul and I are saying , you are assuming that ns1.example.net is signed, and I am not.
+BD: We can make that a requirement. If we don't do that then we need SVCB at the parent, and I don't think that's viable.
+
+VD: Skeptical of parent-signed signaling. We have not discussed putting signaling not in forward name space, but in the unavoidably leaked .arpa zone. This does not leak even in the in-bailiwick case.
+EKR: If a number of people feel that way then adopting this draft is premature.
+
+Peter van Dijk (PvD): Paul Wouters said that you can reuse cached information, but an attacker on path could change information because it is not DNSSEC authenticated. Victor's recommendation has the same problem, glue data is unauthenticated.
+EKR: I assume connection to parent is encrypted.
+PvD: If connection to parent is encrypted, then yes. But I have been assuming that .COM will not go along for a while.
+EKR: The security model is not to usurp TLS design. Any unencrypted links break down. TLDs will have to be encrypted or this won't work (but root does not have to be, because the clients can memorize this somehow).
+PvD: root is uninteresting, but expecting TLDs to encrypt is a big ask.
+
+PH: Scott Hollenbeck talked at last IETF, saying Verisign will be very conservative and take a long time. If you look at random NS records, the vast majority end in .COM or .NET. Victor's suggestion about reverse... deployment of DNSSEC sucks in forward tree, and is even worse in reverse tree.
+EKR: I was unclear about that. I have heard a number of times that they don't think TLDs won't do this, but if that's true then we should abandon this entire project, because protecting ns.example.com vs. foo.example.com then the benefits are _very_ marginal.
+
+dkg: I agree that if none of them are willing to do it we should abandon it, but even if _one_ adopts it in the relatively short term then it's worth doing, because it becomes a differentiator. 
+Name servers can have different names, and we can't inflict if one of the name servers fail then all of them fail. 
+
+*   [New record types in the parent zone](https://datatracker.ietf.org/meeting/111/materials/slides-111-dprive-issue-of-svcb-at-parent-00)
+    - Requester: Wouters
+    - Time Requested: 30m
+    - Chairs Action: Facilitate WG consensus
+
+
+WL: This has me very sad about the prospect of deploying this. We shouldn't have the expectation that TLDs will change things. 
+
+
+Warren Kumari (WK): Name server name encodes the existence of TLS, it's not the key.
+PW: It either has a key or some sort of identifier that cryptographically binds something. It points to something that has to point to something forever.
+WK: Currently true with name server names.
+PW: But they never hard-failed before. This could be problematic. You are right - it is a better mechanism than storing the public key there, but it's still problematic.
+WK: I guess once you have turned on then you can't stop, but before then it's fine. 
+
+ekr: Making a pretty strong case that whatever we define now we will be living with for a very long time. To summarize, you think that we should put this information in a DS records?
+PW: It's one proposal that I think is worth exploring. I think that you can get a DS record at the parent without you having to deploy DNSSEC. Most TLDs run DNSSEC, and the child zone does not need to.
+Ekr: So , I think the props of this signal , whatever it is have to be
+easily proped
+Only apply to this child, not all children with the same noame
+You want third property
+Being secure in the way you describe [on slide 6]
+If I go to .COM and it lies to set up an attack, but it already knows that I'm going to example.com
+I don't care between DS and SVCB
+PW: 
+
+VK: To ekr's point, I think Paul was assuming further labels in the domain name that you may not want to expose to .COM. DS indeed is far more viable than SVCB, provided we don't want to encode keying information. That's when we suddenly have the "cannot change" scenario. Minimal signaling, to find relevant key material go elsewhere. So, "try and find TLSA records" would be the simplest model. DS to signal desireablity of TLSA lookups.
+PW: If the SVCB content is pointing to the FQDN for a name server, then that could be an option too.
+VK: In principle yes, I'm sceptical if this is a place where you can rely on WebPKI to work.
+PW: We have both the options, and may the strongest one wins (or both). Lets not exclude authentication.
+VK: Yes, just don't encode keys there.
+
+Ted Hardie (TH): DS hack sounds promising. Agree with ekr that if reasonable semantics are in there, as long as it works. That doesn't mean that this goes from 10 years down to no years. We have to be practical. It's okay if this takes a while. Figuring out which is the best is fine, but I want to urge the working group... even if it's 10 years, keep at it. It's still a major upgrade to get this done.
+PW: One clarification: if WG does that, please make it clear whether we're using SVCB as glue at the parent or authoritative at the parent, and argue why which one is better.
+
+BS: The name hack thing has some merit. I'm also supportive of people who want to support the DS hack. I think the advantages of the DS are a little more limited. The DS at the parent is also controlled by the parent, so in terms of large scale interception attacks mounted by the parent, the part is _always_ in a position to do that so nothing has changed. We need CDNSKEY not CDS, and we also need new hash algo types to be able to inject this into the DS. We can't expect software upgrades everywhere.
+PW: I think that's a fair point... especially CDS might not be as deployed as we hoped. I want to clarify, the SVCB at parent the only additional function is to protect in-bailiwick name servers, which I think is unfixable anyway. This is a lot of changes for a very small problem, and that seems like overkill to me.
+BS: I do think that one the things here is that DPRIVE is a big change so it shouldn't be a surprise that we're going to have to think hard about the changes. I'm comfortable with that. I think it's even conceivable that we're going end up wanting both of these.
+As Ekr mentioned, you need the TLDs to be fully encrypted to protect the 2LDs.
+
+dkg: I like the DS proposal. I want to point out that if we end up using this we may flush out bugs, because we're making a DS record that does not offer DS. These bugs would be see if we want to upgrade algorithms anyway. So this is preparing us to migrate to a new algorithm suite anyway. Running into these bugs would be healthy. Second thing. This signal should only indicate a couple of bits: hardfail/not, which mechanism, NOT keys. Would a signal in DS relate to entire zone or a specific name server of that zone. There are different impacts of deciding it in different ways.
+BH: We've talked about per-server or per-zone, and we have to work through.
+dkg: I know we've talked about that. I don't see how it can work with per-server mechanism.
+BH: Open issue.
+
+Erik Nygren (EN): Jumping into implementation solutions. Not writing down exactly what all requirements are. Might go a long ways to write down what the requirements are. I agree with Ted that we should aim for a long-term solution. Is there an incremental path towards the 10-year solution? One path draft-tapril-ns2, has similarity to ekr's draft. SVCB-equivalent (NS2, living in parent zone) did not contain keys, but in ALIAS-mode record, so that key could live alongside the name server name. Configuration around keys lives with the owner of the name server and not with the zone.
+BH: Point of frustration about requirements discussion. We had a draft and didn't get much feedback.
+
+BD: DS proposal will be written up, will do it in DNSOP. Will be a new DS algorithm. Contents of record would be a concatenation of the NS RDATA for the child zone, linked to the NS records, independent of child zone itself. Characteristics tied to server not zone. Use a hash of the ...? Downside is getting it into the parent zone, which currently is EPP, but no work on TLD side, except permitting a new algorithm. Allows validatable NS delegations, currently missing in DNS.
+
+VD: With the NS signaling clarified to not carry keys, I am more sympathetic to it. Roughtly equivalent to DS, modulo that we don't have parent signing of NS. If that is desireable, we have to look at the pros and cons.
+
+ekr: Trying to figure out the way forward. 3 points. 1) If we were to change unauthenticated as I said earlier, that would get us a large part of the way there. If you agree with Paul's analysis this is fine because you cache a lot of information, then this gets us far along. 2) If you believe that the cache has to be hot (we've been assuming cold), that would be helpful to flesh out. 3) If we can agree on the information set in this value, then we could debate how it was propagated at the parent separately.
+
+PH: If the working group goes towards DS, Peter and I can change the signal we're using to be a new record type of DS-in-child with the same information in the same format. That might fix the CDS problem. We can come up with a new child record, with just the bits that we want, that can get copied in the parent. 
+
+VD: The DS record in the child is unnecessary. CDS plus a new DS algorithm would work. If the parent information was a hash, you wouldn't need any additional information.
+PH: We're suggesting the DS in the child to allow compatibility.
+VD: There's more than one thing we can play with. SVCB least likely, but others have some creditibility.
+
+BH: Topics that need engaged discussions. Will kick off on mailing list. If people have topics they want covered, please let us know.
