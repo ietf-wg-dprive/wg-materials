@@ -4,19 +4,21 @@
 
 * Date: 11 November 2021
 * Time: 1200-1400 UTC
-* MeetEcho: https://meetings.conf.meetecho.com/ietf112/?group=dprive&short=&item=1
-* Minutes: https://codimd.ietf.org/notes-ietf-112-dprive
+* MeetEcho: [https://meetings.conf.meetecho.com/ietf112/?group=dprive&short=&item=1](https://meetings.conf.meetecho.com/ietf112/?group=dprive&short=&item=1)
+* Minutes: [https://codimd.ietf.org/notes-ietf-112-dprive](https://codimd.ietf.org/notes-ietf-112-dprive)
 
-* Jabber: dprive@jabber.ietf.org
+* Jabber: [dprive@jabber.ietf.org](dprive@jabber.ietf.org)
 
 * [Datatracker](https://datatracker.ietf.org/wg/dprive/documents/)
 
+* [Upload Slides](https://datatracker.ietf.org/meeting/112/session/dprive)
+
 ### Chairs
-* Tim Wicinski <tjw.ietf@gmail.com>
-* Brian Haberman <brian@innovationslab.net>
+* Tim Wicinski [tjw.ietf@gmail.com](tjw.ietf@gmail.com)
+* Brian Haberman [brian@innovationslab.net](brian@innovationslab.net)
 
 ### Very Responsible Area Director
-* Eric Vyncke <evyncke@cisco.com>
+* Eric Vyncke [evyncke@cisco.com](evyncke@cisco.com)
 
 #
 ## Agenda
