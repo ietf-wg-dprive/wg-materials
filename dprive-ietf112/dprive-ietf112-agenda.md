@@ -1,9 +1,9 @@
 
 # DNS Privacy Exchange (DPRIVE) WG
-### IETF 112, XXXX
+### IETF 112, 
 
-* Date: 
-* Time: 
+* Date: 11 November 2021
+* Time: 1200-1400 UTC
 * MeetEcho: https://meetings.conf.meetecho.com/ietf112/?group=dprive&short=&item=1
 * Minutes: https://codimd.ietf.org/notes-ietf-112-dprive
 
@@ -28,5 +28,9 @@
 
 ### Current Working Group Business
 
+*   draft-ietf-dprive-unauth-to-authoritative
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-unauth-to-authoritative/
+    - paul.hoffman@icann.org 30min
+    - Chairs Action:
 
 ### New Working Group Business
