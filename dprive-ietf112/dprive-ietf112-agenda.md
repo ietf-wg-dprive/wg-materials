@@ -36,3 +36,13 @@
     - Chairs Action:
 
 ### New Working Group Business
+
+*   Draft name: draft-schwartz-ds-glue
+    - https://datatracker.ietf.org/doc/draft-schwartz-ds-glue/
+    - bemasc@google.com 20min
+    - Chairs Action:
+
+*   Draft name: draft-dkgjsal-dprive-unilateral-probing
+    - https://gitlab.com/dkg/dprive-unilateral-probing/-/blob/main/unilateral-probing.md
+    - joeygsal@gmail.com 20min
+    - Chairs Action:
