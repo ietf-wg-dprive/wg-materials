@@ -46,3 +46,23 @@
     - https://gitlab.com/dkg/dprive-unilateral-probing/-/blob/main/unilateral-probing.md
     - joeygsal@gmail.com 20min
     - Chairs Action:
+
+*   Draft name: draft-dickson-dnsop-ds-hack
+    - https://datatracker.ietf.org/doc/draft-dickson-dnsop-ds-hack/
+    - brian.peter.dickson@gmail.com 10min
+    - Chairs Action:
+
+*   Draft name: draft-dickson-dnsop-glueless
+    - https://datatracker.ietf.org/doc/draft-dickson-dnsop-glueless/
+    - brian.peter.dickson@gmail.com 10min
+    - Chairs Action:
+
+*   Draft name: draft-dickson-dprive-adot-auth
+    - https://datatracker.ietf.org/doc/draft-dickson-dprive-adot-auth/
+    - brian.peter.dickson@gmail.com 5min
+    - Chairs Action:
+
+*   Draft name: draft-dickson-dprive-dnst
+    - https://datatracker.ietf.org/doc/draft-dickson-dprive-dnst/
+    - brian.peter.dickson@gmail.com 5min
+    - Chairs Action:
