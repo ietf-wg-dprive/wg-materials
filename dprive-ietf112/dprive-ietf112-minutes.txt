@@ -1,0 +1,160 @@
+
+# DNS Privacy Exchange (DPRIVE) WG
+### IETF 112, 
+
+* Date: 11 November 2021
+* Time: 1200-1400 UTC
+* MeetEcho: [https://meetings.conf.meetecho.com/ietf112/?group=dprive&short=&item=1](https://meetings.conf.meetecho.com/ietf112/?group=dprive&short=&item=1)
+* Minutes: [https://notes.ietf.org/notes-ietf-112-dprive](https://notes.ietf.org/notes-ietf-112-dprive)
+
+* Jabber: [dprive@jabber.ietf.org](dprive@jabber.ietf.org)
+
+* [Datatracker](https://datatracker.ietf.org/wg/dprive/documents/)
+
+* [Upload Slides](https://datatracker.ietf.org/meeting/112/session/dprive)
+
+### Chairs
+* Tim Wicinski [tjw.ietf@gmail.com](tjw.ietf@gmail.com)
+* Brian Haberman [brian@innovationslab.net](brian@innovationslab.net)
+
+### Responsible Area Director
+* Éric Vyncke [evyncke@cisco.com](evyncke@cisco.com)
+
+#
+## Agenda
+
+### Administrivia
+
+* Agenda Updates, etc,  10 min
+* NOTE WELL : https://www.ietf.org/about/note-well.html
+
+*   Move DNS-over-DTLS to historic? 
+    - Re-Allocate port to QUIC (IESG)
+    - Chairs
+
+*Action Item: Will take this to the mailing list
+    Moving DNS-over-DTLS to Historic
+    Update name for port 853 to DNSoQUIC/DNSoDTLS*
+
+### Current Working Group Business
+
+*   draft-ietf-dprive-unauth-to-authoritative
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-unauth-to-authoritative/
+    - paul.hoffman@icann.org 30min
+    - Chairs Action:
+
+Paul Hoffman:  04 version out, little comments. Authenicated fell off.
+
+Joey: advancing work on a specific use case should not limit the advance of other use cases; we're all working on  having better encryption of the net and it should'nt be  "either or ".
+
+ekr: interested in use case is still constant. WG interest has fallen off.
+Waiting to hear interest in Ben's document.
+
+Brian Haberman: WGLC to see if folks are happy, mark it for experimentation.
+
+PH: Don't want dictorate reviews as this is still in flux.
+
+ekr: no progress for consensus on this approach.
+
+*Action Item: Chairs will huddle with AD on use case discussion*
+
+### New Working Group Business
+
+*   draft-dkgjsal-dprive-unilateral-probing
+    - https://gitlab.com/dkg/dprive-unilateral-probing/-/blob/main/unilateral-probing.md
+    - joeygsal@gmail.com 20min
+    - Chairs Action:
+
+dkg: Not in datatracker, but will upload shortly.
+
+Ben Schwartz: Supports adoption, also when Paul Hoffman wrote initially.
+
+Brian Dickson: Proposed is How, left unanswered is the When.
+
+dkg: wants to get as many queries as possible
+
+BD: vendor of long tail of domains would have issues supporting
+
+Joey:  we could add in the auth servers recommendations section.
+
+dkg: section on resource exhaustion under server guidance, should add stop answering on
+encrypter connections.
+
+ekr: would love to hear from auth servers to something which leads to universal encryption.
+
+Peter van Dijk:  DNS Error Reporting draft, though could have troubles. SNI might make sense in
+some scenarios.  Return TCP Reset, was told too expensive.
+
+Erik Nygren: availability/stability important in their authorative platform.  Maybe discuss how not to do this.
+
+dkg: don't want to overburden providers who do not wish to roll this out. auth / recursive may be different
+(fill in)
+
+BS: Aware in real interest in 100% encryption. unilateral probing makes STS signal unneccesary.
+
+dkg: one non strict signal is wanting error reports
+
+BD: want to provide encryption transport.
+
+dkg: shame if greedy clients cause this to fail
+
+BD: do want to use SNI to handle subset of names
+
+dkg: designed to fall back to cleartext
+
+*   draft-schwartz-ds-glue
+    - https://datatracker.ietf.org/doc/draft-schwartz-ds-glue/
+    - bemasc@google.com 20min
+    - Chairs Action:
+
+Warren Kumari: Likes authenicated, feels complex. potential reasonable. Requires DNSSEC, but folks can not 
+add DS records easily. Better than nothing. 
+
+BS: can also CDNSKEY, but only if child can get convince parent. 
+
+Jonathan Reed:  Can we add random DS record types. Also we have Flag Day ideas. Can we ever add new RRTypes?
+
+ekr: would implore the chairs to craft a mechanism to solve this problem. 
+
+PH: what ekr said
+
+dkg: Likes draft/framing. Have you tried to publish such records
+
+BS: there are barriers to this. limited number of CDS implementations
+
+dkr: we need new signed record types 
+
+Peter Thomassen: child zone name is leaked. 
+
+BS: NS name is not sensitive. 
+
+Ralf Weber: Can change stuff at parent. More in line with how DNS works. 
+
+BS: work involved in adding new record types to parent
+
+Robert Evans:  Multiple Paths ADoT adoption. Perhaps lower bar to "could work"
+
+BS: Experimental solution in charter. 
+
+*Action Item: follow up on ekr's mechanism crafting comment*
+
+*   draft-dickson-dnsop-ds-hack
+    - https://datatracker.ietf.org/doc/draft-dickson-dnsop-ds-hack/
+    - brian.peter.dickson@gmail.com 10min
+    - Chairs Action:
+
+*   draft-dickson-dnsop-glueless
+    - https://datatracker.ietf.org/doc/draft-dickson-dnsop-glueless/
+    - brian.peter.dickson@gmail.com 10min
+    - Chairs Action:
+
+*   draft-dickson-dprive-adot-auth
+    - https://datatracker.ietf.org/doc/draft-dickson-dprive-adot-auth/
+    - brian.peter.dickson@gmail.com 5min
+    - Chairs Action:
+
+*   draft-dickson-dprive-dnst
+    - https://datatracker.ietf.org/doc/draft-dickson-dprive-dnst/
+    - brian.peter.dickson@gmail.com 5min
+    - Chairs Action:
+
