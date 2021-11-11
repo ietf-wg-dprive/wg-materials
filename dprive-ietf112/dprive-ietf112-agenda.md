@@ -28,6 +28,10 @@
 * Agenda Updates, etc,  10 min
 * NOTE WELL : https://www.ietf.org/about/note-well.html
 
+*   Move DNS-over-DTLS to historic? 
+    - Re-Allocate port to QUIC (IESG)
+    - Chairs
+
 ### Current Working Group Business
 
 *   draft-ietf-dprive-unauth-to-authoritative
@@ -37,32 +41,32 @@
 
 ### New Working Group Business
 
-*   Draft name: draft-schwartz-ds-glue
-    - https://datatracker.ietf.org/doc/draft-schwartz-ds-glue/
-    - bemasc@google.com 20min
-    - Chairs Action:
-
-*   Draft name: draft-dkgjsal-dprive-unilateral-probing
+*   draft-dkgjsal-dprive-unilateral-probing
     - https://gitlab.com/dkg/dprive-unilateral-probing/-/blob/main/unilateral-probing.md
     - joeygsal@gmail.com 20min
     - Chairs Action:
 
-*   Draft name: draft-dickson-dnsop-ds-hack
+*   draft-schwartz-ds-glue
+    - https://datatracker.ietf.org/doc/draft-schwartz-ds-glue/
+    - bemasc@google.com 20min
+    - Chairs Action:
+
+*   draft-dickson-dnsop-ds-hack
     - https://datatracker.ietf.org/doc/draft-dickson-dnsop-ds-hack/
     - brian.peter.dickson@gmail.com 10min
     - Chairs Action:
 
-*   Draft name: draft-dickson-dnsop-glueless
+*   draft-dickson-dnsop-glueless
     - https://datatracker.ietf.org/doc/draft-dickson-dnsop-glueless/
     - brian.peter.dickson@gmail.com 10min
     - Chairs Action:
 
-*   Draft name: draft-dickson-dprive-adot-auth
+*   draft-dickson-dprive-adot-auth
     - https://datatracker.ietf.org/doc/draft-dickson-dprive-adot-auth/
     - brian.peter.dickson@gmail.com 5min
     - Chairs Action:
 
-*   Draft name: draft-dickson-dprive-dnst
+*   draft-dickson-dprive-dnst
     - https://datatracker.ietf.org/doc/draft-dickson-dprive-dnst/
     - brian.peter.dickson@gmail.com 5min
     - Chairs Action:
