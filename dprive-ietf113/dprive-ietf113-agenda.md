@@ -2,8 +2,8 @@
 # DNS Privacy Exchange (DPRIVE) WG
 ### IETF 113
 
-* Date: 
-* Time: 
+* Date: 24 March 2022
+* Time: 1430-1515 CEST (UTC+1)
 * MeetEcho: [https://meetings.conf.meetecho.com/ietf113/?group=dprive&short=&item=1](https://meetings.conf.meetecho.com/ietf113/?group=dprive&short=&item=1)
 * Minutes: [https://codimd.ietf.org/notes-ietf-113-dprive](https://codimd.ietf.org/notes-ietf-113-dprive)
 
