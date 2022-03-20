@@ -30,16 +30,12 @@
 
 ### Current Working Group Business
 
-*   draft-dkgjsal-dprive-unilateral-probing
-    - https://datatracker.ietf.org/doc/draft-dkgjsal-dprive-unilateral-probing/
-    - 15min
-
-*   draft-ietf-dprive-unauth-to-authoritative
-    - https://datatracker.ietf.org/doc/draft-ietf-dprive-unauth-to-authoritative/
-    -  15min
+*   draft-ietf-dprive-unilateral-probing
+    - https://datatracker.ietf.org/doc/draft-ietf-dprive-unilateral-probing/
+    - 20min
 
 *   Future plans for dprive - is the WG completed all tasks?  
-    - Chairs, 20min
+    - Chairs, 40min
 
-
+sl 
 ### New Working Group Business
