@@ -34,8 +34,8 @@
     - https://datatracker.ietf.org/doc/draft-ietf-dprive-unilateral-probing/
     - 20min
 
-*   Future plans for dprive - is the WG completed all tasks?  
-    - Chairs, 40min
+*   Future plans for dprive
+    - Chairs, 15min
 
 sl 
 ### New Working Group Business
