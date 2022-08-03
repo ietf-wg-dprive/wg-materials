@@ -1,0 +1,16 @@
+DPRIVE WG
+2022-07-26
+Chairs: Tim Wicinski and Brian Haberman
+Notes here only cover comments at the mic, not from the slides
+
+Admin stuff and WG update
+    Things are going along, but slow
+    Wants to see where things are going
+
+draft-ietf-dprive-unilateral-probing: Daniel Kahn Gillmor
+    Tim: Would like to hear from other implementers
+    Benno Overeinder: Will speak offline about new work
+    Puneet Sood: Google Public DNS is doing at least parts of this
+    Viktor Dukhovni: Looking to speak with auth servers about tuning and so on
+    Paul Hoffman: This supposed to be harmless or minimal impact
+        Let us know if that's not right in the draft
